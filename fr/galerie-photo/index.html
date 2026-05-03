@@ -3,116 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallerie photo de cmion Nacelle RH boom echelle télecscopique | RH Equipment</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Galerie Photo | RH Equipment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #fda40a;
-            --secondary: #1a1a1a;
-            --accent: #0056b3;
-            --text: #333;
-            --light: #f8f9fa;
-            --white: #ffffff;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }
-
-        /* Navigation */
-        nav {
-            background: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo img { height: 45px; }
-        .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+        :root { --primary: #fda40a; --secondary: #121212; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: #fff; }
+        nav { background: var(--secondary); padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index:1000; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+        .elite-pill { background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }
         
-        .elite-btn {
-            background: var(--primary);
-            color: white !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 4px;
-            font-weight: 700 !important;
-        }
-
-        /* Hero */
-        .hero-sub {
-            padding: 6rem 5%;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-        }
-        .hero-sub h1 { font-size: 2.5rem; font-weight: 800; text-transform: uppercase; }
-
-        /* Content */
-        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 5%; }
-        .editable-content { font-size: 1.05rem; }
-        .editable-content h2 { font-size: 2rem; margin: 2rem 0 1rem; color: var(--secondary); border-left: 5px solid var(--primary); padding-left: 1rem; }
-        .editable-content p { margin-bottom: 1.5rem; }
-        .editable-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .hero-sub { padding: 4rem 5%; background: #f4f4f4; text-align: center; border-bottom: 4px solid var(--primary); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; padding: 2rem 5%; }
+        .gallery-item { height: 250px; overflow: hidden; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+        .gallery-item:hover { transform: scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
         
-        /* Tables (Fiches techniques) */
-        table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: var(--light); border-radius: 8px; overflow: hidden; }
-        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: #eee; font-weight: 700; }
-
-        /* Footer */
-        footer { background: var(--secondary); color: white; padding: 4rem 5%; text-align: center; margin-top: 5rem; }
-        .footer-logo img { height: 40px; margin-bottom: 2rem; filter: brightness(0) invert(1); }
-        .lang-switch { margin-top: 2rem; font-size: 0.8rem; opacity: 0.6; }
-        .lang-switch a { color: white; text-decoration: none; margin: 0 10px; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-        }
+        footer { background: var(--secondary); color: white; padding: 3rem; text-align: center; margin-top: 4rem; }
     </style>
 </head>
 <body>
-
     <nav>
-        <div class="logo">
-            <a href="/fr/"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png" alt="RH Logo" style="filter: invert(1);"></a>
-        </div>
+        <div class="logo"><a href="/fr/"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 40px;"></a></div>
         <ul class="nav-links">
-            
     <li><a href="/fr/">Accueil</a></li>
-    <li><a href="/fr/rh_equipment-aerial-product-line/">Produits</a></li>
+    <li><a href="/fr/catalogue-isole/">Produits</a></li>
     <li><a href="/fr/galerie-photo/">Galerie</a></li>
-    <li><a href="/fr/service-entretien/">Services</a></li>
+    <li><a href="https://starh.ca/" target="_blank">Services</a></li>
     <li><a href="/fr/carriere/">Carrière</a></li>
     <li><a href="/fr/contact-fr/">Contact</a></li>
-
-            <li><a href="https://rhed.ca/" target="_blank" class="elite-btn">Division Elite</a></li>
-        </ul>
+<li><a href="https://rhed.ca/" target="_blank" class="elite-pill">Elite</a></li></ul>
     </nav>
-
-    <header class="hero-sub">
-        <h1>Gallerie photo de cmion Nacelle RH boom echelle télecscopique</h1>
-    </header>
-
-    <main class="container">
-        <div class="editable-content editable">
-            
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-logo"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png"></div>
-        <p>© 2026 RH Equipment - Expertise & Innovation</p>
-        <div class="lang-switch">
-            <a href="/fr/">Français</a> | <a href="/en/">English</a> | <a href="https://starh.ca/" target="_blank">Starh Service</a>
-        </div>
-    </footer>
-
+    <header class="hero-sub"><h1>Galerie Photo</h1></header>
+    <div class="gallery-grid"><div class="gallery-item"><img src="/media/2020/11/gallery-1.jpg" alt="RH Action 1"></div><div class="gallery-item"><img src="/media/2020/11/gallery-2.jpg" alt="RH Action 2"></div><div class="gallery-item"><img src="/media/2020/11/gallery-3.jpg" alt="RH Action 3"></div><div class="gallery-item"><img src="/media/2020/11/gallery-4.jpg" alt="RH Action 4"></div><div class="gallery-item"><img src="/media/2020/11/gallery-5.jpg" alt="RH Action 5"></div><div class="gallery-item"><img src="/media/2020/11/gallery-6.jpg" alt="RH Action 6"></div><div class="gallery-item"><img src="/media/2020/11/gallery-7.jpg" alt="RH Action 7"></div><div class="gallery-item"><img src="/media/2020/11/gallery-8.jpg" alt="RH Action 8"></div><div class="gallery-item"><img src="/media/2020/11/gallery-9.jpg" alt="RH Action 9"></div><div class="gallery-item"><img src="/media/2020/11/gallery-10.jpg" alt="RH Action 10"></div><div class="gallery-item"><img src="/media/2020/11/gallery-11.jpg" alt="RH Action 11"></div><div class="gallery-item"><img src="/media/2020/11/gallery-12.jpg" alt="RH Action 12"></div><div class="gallery-item"><img src="/media/2020/11/gallery-13.jpg" alt="RH Action 13"></div><div class="gallery-item"><img src="/media/2020/11/gallery-14.jpg" alt="RH Action 14"></div><div class="gallery-item"><img src="/media/2020/11/gallery-15.jpg" alt="RH Action 15"></div><div class="gallery-item"><img src="/media/2020/11/gallery-16.jpg" alt="RH Action 16"></div><div class="gallery-item"><img src="/media/2020/11/gallery-17.jpg" alt="RH Action 17"></div><div class="gallery-item"><img src="/media/2020/11/gallery-18.jpg" alt="RH Action 18"></div><div class="gallery-item"><img src="/media/2020/11/gallery-19.jpg" alt="RH Action 19"></div><div class="gallery-item"><img src="/media/2020/11/gallery-20.jpg" alt="RH Action 20"></div><div class="gallery-item"><img src="/media/2020/11/gallery-21.jpg" alt="RH Action 21"></div><div class="gallery-item"><img src="/media/2020/11/gallery-22.jpg" alt="RH Action 22"></div><div class="gallery-item"><img src="/media/2020/11/gallery-23.jpg" alt="RH Action 23"></div><div class="gallery-item"><img src="/media/2020/11/gallery-24.jpg" alt="RH Action 24"></div><div class="gallery-item"><img src="/media/2020/11/gallery-25.jpg" alt="RH Action 25"></div><div class="gallery-item"><img src="/media/2020/11/gallery-26.jpg" alt="RH Action 26"></div><div class="gallery-item"><img src="/media/2020/11/gallery-27.jpg" alt="RH Action 27"></div><div class="gallery-item"><img src="/media/2020/11/gallery-28.jpg" alt="RH Action 28"></div><div class="gallery-item"><img src="/media/2020/11/gallery-29.jpg" alt="RH Action 29"></div><div class="gallery-item"><img src="/media/2020/11/gallery-30.jpg" alt="RH Action 30"></div><div class="gallery-item"><img src="/media/2020/11/gallery-31.jpg" alt="RH Action 31"></div><div class="gallery-item"><img src="/media/2020/11/gallery-32.jpg" alt="RH Action 32"></div><div class="gallery-item"><img src="/media/2020/11/gallery-33.jpg" alt="RH Action 33"></div><div class="gallery-item"><img src="/media/2020/11/gallery-34.jpg" alt="RH Action 34"></div><div class="gallery-item"><img src="/media/2020/11/gallery-35.jpg" alt="RH Action 35"></div><div class="gallery-item"><img src="/media/2020/11/gallery-36.jpg" alt="RH Action 36"></div><div class="gallery-item"><img src="/media/2020/11/gallery-37.jpg" alt="RH Action 37"></div><div class="gallery-item"><img src="/media/2020/11/gallery-38.jpg" alt="RH Action 38"></div><div class="gallery-item"><img src="/media/2020/11/gallery-39.jpg" alt="RH Action 39"></div><div class="gallery-item"><img src="/media/2020/11/gallery-40.jpg" alt="RH Action 40"></div><div class="gallery-item"><img src="/media/2020/11/gallery-41.jpg" alt="RH Action 41"></div><div class="gallery-item"><img src="/media/2020/11/gallery-42.jpg" alt="RH Action 42"></div><div class="gallery-item"><img src="/media/2020/11/gallery-43.jpg" alt="RH Action 43"></div><div class="gallery-item"><img src="/media/2020/11/gallery-44.jpg" alt="RH Action 44"></div><div class="gallery-item"><img src="/media/2020/11/gallery-45.jpg" alt="RH Action 45"></div><div class="gallery-item"><img src="/media/2020/11/gallery-46.jpg" alt="RH Action 46"></div><div class="gallery-item"><img src="/media/2020/11/gallery-47.jpg" alt="RH Action 47"></div><div class="gallery-item"><img src="/media/2020/11/gallery-48.jpg" alt="RH Action 48"></div></div>
+    <footer><p>© 2026 RH Equipment</p></footer>
 </body>
 </html>
