@@ -52,14 +52,14 @@
 
         /* Hero Section */
         .hero {
-            height: 100vh; display: flex; align-items: center; justify-content: center;
+            height: 70vh; display: flex; align-items: center; justify-content: center;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg');
             background-size: cover; background-position: center; color: var(--white); text-align: center;
-            padding-top: 80px;
+            padding-top: 60px;
         }
         .hero-content { max-width: 900px; padding: 0 2rem; }
-        .hero h1 { font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; text-transform: uppercase; }
-        .hero p { font-size: 1.2rem; font-weight: 300; margin-bottom: 2.5rem; opacity: 0.9; letter-spacing: 0.5px; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem; text-transform: uppercase; }
+        .hero p { font-size: 1.1rem; font-weight: 300; margin-bottom: 1.5rem; opacity: 0.9; letter-spacing: 0.5px; }
         .hero .btn-hero { 
             padding: 1.2rem 3rem; background: var(--primary); color: var(--white); 
             text-decoration: none; font-weight: 800; border-radius: 4px; text-transform: uppercase; 
@@ -94,10 +94,17 @@
             background: var(--secondary); color: var(--white); display: flex; align-items: center; 
             padding: 0; overflow: hidden; min-height: 600px;
         }
-        .elite-text { flex: 1; padding: 5rem 10%; }
+        .elite-text { flex: 1; padding: 5rem 8%; }
         .elite-text h2 { font-size: 3rem; font-weight: 900; color: var(--primary); margin-bottom: 2rem; text-transform: uppercase; }
         .elite-text p { font-size: 1.1rem; opacity: 0.8; margin-bottom: 3rem; }
-        .elite-img { flex: 1; height: 600px; background: url('/media/2021/12/firetruck1.jpg'); background-size: cover; background-position: center; }
+        .elite-img { flex: 1; height: 600px; background: url('/media/2025/06/p68czeoz.jpg'); background-size: cover; background-position: center; }
+        
+        .elite-link-giant {
+            font-size: 2.2rem; font-weight: 900; color: var(--primary); text-decoration: none; 
+            text-transform: uppercase; border-bottom: 5px solid var(--primary); padding-bottom: 5px;
+            transition: var(--transition); display: inline-block;
+        }
+        .elite-link-giant:hover { color: var(--white); border-color: var(--white); }
 
         /* Features */
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 4rem; text-align: center; }
@@ -192,7 +199,7 @@
         <div class="elite-text">
             <h2>Elite Division</h2>
             <p>Pour les missions les plus exigeantes. La division Elite de RH Equipment repousse les limites de l'accessibilité avec des unités de combat incendie et des nacelles à très haute performance.</p>
-            <a href="https://rhed.ca/" target="_blank" class="btn-hero" style="background: transparent; border: 2px solid var(--primary);">Visiter rhed.ca</a>
+            <a href="https://rhed.ca/" target="_blank" class="elite-link-giant">Visiter rhed.ca</a>
         </div>
         <div class="elite-img"></div>
     </section>
