@@ -4,434 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product aerial lift line | RH Equipment</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #fda40a;
-            --secondary: #1a1a1a;
-            --accent: #0056b3;
-            --text: #333;
-            --light: #f8f9fa;
-            --white: #ffffff;
-        }
-
+        :root { --primary: #fda40a; --secondary: #121212; --text: #1a1a1a; --light: #f8f9fa; --white: #ffffff; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }
 
-        /* Navigation */
-        nav {
-            background: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo img { height: 45px; }
-        .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+        nav { position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--secondary); color: white; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo img { height: 40px; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+        .elite-pill { background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }
+
+        .hero-prod { padding: 4rem 5%; background: #f4f4f4; text-align: center; border-bottom: 4px solid var(--primary); }
+        .hero-prod h1 { font-size: 2.5rem; font-weight: 900; text-transform: uppercase; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; }
+        .prod-media { flex: 1; min-width: 400px; }
+        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         
-        .elite-btn {
-            background: var(--primary);
-            color: white !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 4px;
-            font-weight: 700 !important;
-        }
-
-        /* Hero */
-        .hero-sub {
-            padding: 6rem 5%;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-        }
-        .hero-sub h1 { font-size: 2.5rem; font-weight: 800; text-transform: uppercase; }
-
-        /* Content */
-        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 5%; }
-        .editable-content { font-size: 1.05rem; }
-        .editable-content h2 { font-size: 2rem; margin: 2rem 0 1rem; color: var(--secondary); border-left: 5px solid var(--primary); padding-left: 1rem; }
-        .editable-content p { margin-bottom: 1.5rem; }
-        .editable-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .prod-info { flex: 1.2; min-width: 400px; }
+        .prod-desc { margin-bottom: 3rem; font-size: 1.1rem; color: #444; }
+        .prod-desc p { margin-bottom: 1rem; }
         
-        /* Tables (Fiches techniques) */
-        table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: var(--light); border-radius: 8px; overflow: hidden; }
-        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: #eee; font-weight: 700; }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+        .specs-table td { padding: 0.8rem 1rem; border-bottom: 1px solid #eee; }
+        .specs-table tr:hover { background: var(--light); }
+        .spec-label { font-weight: 700; color: var(--secondary); width: 40%; }
 
-        /* Footer */
-        footer { background: var(--secondary); color: white; padding: 4rem 5%; text-align: center; margin-top: 5rem; }
-        .footer-logo img { height: 40px; margin-bottom: 2rem; filter: brightness(0) invert(1); }
-        .lang-switch { margin-top: 2rem; font-size: 0.8rem; opacity: 0.6; }
-        .lang-switch a { color: white; text-decoration: none; margin: 0 10px; }
+        footer { background: #0a0a0a; color: white; padding: 4rem 5% 2rem; text-align: center; margin-top: 5rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; opacity: 0.6; font-size: 0.8rem; }
+        .footer-links a { color: white; text-decoration: none; }
 
         @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .prod-media, .prod-info { min-width: 100%; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
-
     <nav>
-        <div class="logo">
-            <a href="/en/"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png" alt="RH Logo" style="filter: invert(1);"></a>
-        </div>
+        <div class="logo"><a href="/en/"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png"></a></div>
         <ul class="nav-links">
-            
-    <li><a href="/en/">Home</a></li>
-    <li><a href="/en/rh_equipment-aerial-product-line/">Products</a></li>
-    <li><a href="/en/gallery-aerial-ladder-image/">Gallery</a></li>
-    <li><a href="/en/service-offer/">Services</a></li>
-    <li><a href="/en/carriere/">Careers</a></li>
-    <li><a href="/en/contacts/">Contact</a></li>
-
-            <li><a href="https://rhed.ca/" target="_blank" class="elite-btn">Division Elite</a></li>
+            <li><a href="/en/">Home</a></li>
+            <li><a href="/en/catalogue-isole/">Insulated</a></li>
+            <li><a href="/en/catalogue-non-isole/">Non-Insulated</a></li>
+            <li><a href="/en/options-et-accessoires/">Options</a></li>
+            <li><a href="https://rhed.ca/" target="_blank" class="elite-pill">Elite</a></li>
         </ul>
     </nav>
 
-    <header class="hero-sub">
+    <header class="hero-prod">
         <h1>Product aerial lift line</h1>
     </header>
 
     <main class="container">
-        <div class="editable-content editable">
-            <div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_201">
-               AERIAL
-              </p>
-</div>
-<div aria-multiline="true" class="moto-widget-text-content moto-widget-text-editable" data-lt-tmp-id="lt-674839">
-<p class="moto-text_system_5">
-               PRODUCT LINE
-              </p>
-</div>
-<img src="/media/2020/11/divider450_57e85d861c0fe.png" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH38D
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="45" href="/rh38d_eng-aerial-ladder-rh38d/" target="_self">
-                        INSULATED
-                       </a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH44D
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="46" href="/rh44d_eng-aerial-ladder-insulated-boom-truck/" target="_self">
-                        INSULATED
-                       </a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH50D
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="47" href="/rh50d_eng-aerial-ladder-boom-truck/" target="_self">
-                        INSULATED
-                       </a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH38D GA
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="33" href="/ford-transit-ground-access-boom/" target="_self">
-                        INSULATED
-                       </a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH35
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="39" href="/rh35_eng-aerial-ladder-boom/" target="_self">
-<span style="color:#fcab02;">
-                         LADDER line
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RHL37
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="40" href="/rhl37_eng-aerial-ladder-boom-truck/" target="_self">
-<span style="color:#fcab02;">
-                         LADDER line
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH38
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="41" href="/rh38_eng-aerial-ladder-non-insuated/" target="_self">
-<span style="color:#fcab02;">
-                         LADDER line
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH41
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="42" href="/rh41-ladder-boom/" target="_self">
-<span style="color:#fcab02;">
-                         LADDER line
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH44
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="43" href="/rh44_eng-aerial-ladder-truck/" target="_self">
-<span style="color:#fcab02;">
-                         LADDER line
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH47
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="44" href="/rh47_en-aerial-ladder-telescopic-boom-truck/" target="_self">
-<span style="color:#fcab02;">
-                         LADDER line
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RHS34
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="35" href="/rhs34_eng-stairs-telescopic-system/" target="_self">
-<span style="color:#fcab02;">
-                         STAIRS SYSTEM
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RHP14
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="34" href="/rhp14_eng-street-sign-maintenance/" target="_self">
-<span style="color:#fcab02;">
-                         ROAD SIGN
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RH44T
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="38" href="/rh44t_eng-lashing-truck-telecom/" target="_self">
-<span style="color:#fcab02;">
-                         LASHING TRUCK
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         BR (Prinoth)
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="37" href="/br-400_eng/" target="_self">
-<span style="color:#fcab02;">
-                         LADDER line
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                         RHR45
-                        </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="36" href="/rhr_eng-insulated-towable-ladder/" target="_self">
-<span style="color:#fcab02;">
-                         RHR TOWABLE LINE
-                        </span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_4">
-<a class="moto-link" data-action="page" data-id="50" href="/options-and-accesories/" target="_self">
-<strong>
-                         Options
-                        </strong>
-</a>
-</p>
-</div>
-<img src="/media/2020/11/options-icon-rh.png" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_203">
-<strong>
-                    Options available
-                   </strong>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_204">
-<span style="color:#fbb21b;">
-                RH All right reserved 2023
-               </span>
-               © WEB Lesage concept image
-              </p>
-</div>
-<div aria-multiline="true" class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_13">
-<a class="moto-link" data-action="page" data-id="50" href="/options-and-accesories/" target="_self">
-<span class="moto-color5_5">
-<strong>
-                      LIST
-                     </strong>
-</span>
-</a>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_202">
-<a class="moto-link" data-action="page" data-id="50" href="/options-and-accesories/" target="_self">
-<strong>
-<span style="color:#fcab02;">
-                      OPTIONS
-                     </span>
-</strong>
-</a>
-</p>
-</div>
+        <div class="prod-media">
+            <img src="/media/2020/11/rh-ladder-product-main.jpg" alt="Product aerial lift line">
+        </div>
+        <div class="prod-info">
+            <div class="prod-desc">
+                
+            </div>
+            <h3>Spécifications Techniques</h3>
+            <table class="specs-table">
+                
+            </table>
+            
+            <div style="margin-top: 3rem;">
+                <a href="https://rhed.ca/contact" class="elite-pill" style="display: inline-block; text-decoration: none;">Demander une soumission</a>
+            </div>
         </div>
     </main>
 
     <footer>
-        <div class="footer-logo"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png"></div>
-        <p>© 2026 RH Equipment - Expertise & Innovation</p>
-        <div class="lang-switch">
-            <a href="/fr/">Français</a> | <a href="/en/">English</a> | <a href="https://starh.ca/" target="_blank">Starh Service</a>
+        <img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 30px; margin-bottom: 1rem;">
+        <p>© 2026 RH Equipment. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/fr/">Français</a> | <a href="/en/">English</a> | <a href="https://starh.ca/">Starh Service</a>
         </div>
     </footer>
-
 </body>
 </html>

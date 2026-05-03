@@ -4,589 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A propos: historique de Robert hydraulique / Les Équipements RH, fondée en 1991 RH s'est positionné comme un leader innovant dans l'industrie de la NAcelle echelle aérienne. | RH Equipment</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #fda40a;
-            --secondary: #1a1a1a;
-            --accent: #0056b3;
-            --text: #333;
-            --light: #f8f9fa;
-            --white: #ffffff;
-        }
-
+        :root { --primary: #fda40a; --secondary: #121212; --text: #1a1a1a; --light: #f8f9fa; --white: #ffffff; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }
 
-        /* Navigation */
-        nav {
-            background: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo img { height: 45px; }
-        .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+        nav { position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--secondary); color: white; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo img { height: 40px; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+        .elite-pill { background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }
+
+        .hero-prod { padding: 4rem 5%; background: #f4f4f4; text-align: center; border-bottom: 4px solid var(--primary); }
+        .hero-prod h1 { font-size: 2.5rem; font-weight: 900; text-transform: uppercase; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; }
+        .prod-media { flex: 1; min-width: 400px; }
+        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         
-        .elite-btn {
-            background: var(--primary);
-            color: white !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 4px;
-            font-weight: 700 !important;
-        }
-
-        /* Hero */
-        .hero-sub {
-            padding: 6rem 5%;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-        }
-        .hero-sub h1 { font-size: 2.5rem; font-weight: 800; text-transform: uppercase; }
-
-        /* Content */
-        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 5%; }
-        .editable-content { font-size: 1.05rem; }
-        .editable-content h2 { font-size: 2rem; margin: 2rem 0 1rem; color: var(--secondary); border-left: 5px solid var(--primary); padding-left: 1rem; }
-        .editable-content p { margin-bottom: 1.5rem; }
-        .editable-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .prod-info { flex: 1.2; min-width: 400px; }
+        .prod-desc { margin-bottom: 3rem; font-size: 1.1rem; color: #444; }
+        .prod-desc p { margin-bottom: 1rem; }
         
-        /* Tables (Fiches techniques) */
-        table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: var(--light); border-radius: 8px; overflow: hidden; }
-        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: #eee; font-weight: 700; }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+        .specs-table td { padding: 0.8rem 1rem; border-bottom: 1px solid #eee; }
+        .specs-table tr:hover { background: var(--light); }
+        .spec-label { font-weight: 700; color: var(--secondary); width: 40%; }
 
-        /* Footer */
-        footer { background: var(--secondary); color: white; padding: 4rem 5%; text-align: center; margin-top: 5rem; }
-        .footer-logo img { height: 40px; margin-bottom: 2rem; filter: brightness(0) invert(1); }
-        .lang-switch { margin-top: 2rem; font-size: 0.8rem; opacity: 0.6; }
-        .lang-switch a { color: white; text-decoration: none; margin: 0 10px; }
+        footer { background: #0a0a0a; color: white; padding: 4rem 5% 2rem; text-align: center; margin-top: 5rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; opacity: 0.6; font-size: 0.8rem; }
+        .footer-links a { color: white; text-decoration: none; }
 
         @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .prod-media, .prod-info { min-width: 100%; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
-
     <nav>
-        <div class="logo">
-            <a href="/fr/"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png" alt="RH Logo" style="filter: invert(1);"></a>
-        </div>
+        <div class="logo"><a href="/fr/"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png"></a></div>
         <ul class="nav-links">
-            
-    <li><a href="/fr/">Accueil</a></li>
-    <li><a href="/fr/rh_equipment-aerial-product-line/">Produits</a></li>
-    <li><a href="/fr/galerie-photo/">Galerie</a></li>
-    <li><a href="/fr/service-entretien/">Services</a></li>
-    <li><a href="/fr/carriere/">Carrière</a></li>
-    <li><a href="/fr/contact-fr/">Contact</a></li>
-
-            <li><a href="https://rhed.ca/" target="_blank" class="elite-btn">Division Elite</a></li>
+            <li><a href="/fr/">Accueil</a></li>
+            <li><a href="/fr/catalogue-isole/">Isolées</a></li>
+            <li><a href="/fr/catalogue-non-isole/">Non-Isolées</a></li>
+            <li><a href="/fr/options-et-accessoires/">Options</a></li>
+            <li><a href="https://rhed.ca/" target="_blank" class="elite-pill">Elite</a></li>
         </ul>
     </nav>
 
-    <header class="hero-sub">
+    <header class="hero-prod">
         <h1>A propos: historique de Robert hydraulique / Les Équipements RH, fondée en 1991 RH s'est positionné comme un leader innovant dans l'industrie de la NAcelle echelle aérienne.</h1>
     </header>
 
     <main class="container">
-        <div class="editable-content editable">
-            <img src="/media/2020/11/apropos_orb.png" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9">
-               Fondé en 1991, Robert Hydraulique inc. a développé au cours des années une nouvelle gamme d'échelles aériennes hydrauliques (nacelles) avec des hauteurs de travail variant de 35 à 50 pieds (10 à 15 m).
-              </p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-               Robert Hydraulique inc. est le manufacturier des échelles aériennes hydrauliques isolées et non isolées RH. Dans ce domaine d'équipement spécialisé, la conception innovante, la fiabilité et l’efficacité des produits donnent une réputation solide et croissante à notre entreprise.
-              </p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-               Le leitmotiv de Robert Hydraulique inc. peut se résumer ainsi  : « Développer un produit spécifique aux besoins du marché et créer un concept de haute technologie qui respecte minutieusement les plus hautes exigences de nos utilisateurs ». Le résultat : « une échelle aérienne hydraulique polyvalente et durable qui fonctionne dans des domaines d'application des plus diversifiés ».
-              </p>
-<p class="moto-text_system_9">
-<br/>
-               Voilà ce qui explique le succès grandissant des nacelles Robert Hydraulique inc.
-              </p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-               Nos échelles hydrauliques sont utilisées dans les domaines suivants :
-               <br/>
-               - les projets gouvernementaux,
-               <br/>
-               - les télécommunications,
-               <br/>
-               - la câblodistribution,
-               <br/>
-               - les travaux publics,
-               <br/>
-               - l’installation/entretien de réseaux d’électricité,
-               <br/>
-               - la conception/installation d'enseignes,
-               <br/>
-               - l’émondage,
-               <br/>
-               - l’entretien des bâtiments et des stations de ski.
-              </p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_203" style="text-align: center;">
-<span class="moto-color1_3">
-                Premier prototype d’échelle diélectrique en 1997.
-               </span>
-</p>
-</div>
-<img src="/media/2020/11/premier_prototype.png" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                 2005
-                </strong>
-</span>
-</p>
-<p class="moto-text_system_11">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color5_5">
-<strong>
-                 En 2005, Robert Hydraulique inc. obtint son premier contrat en Corée du Sud, en créant un nouveau modèle d’échelle en quatre sections avec une compagnie établie à Séoul.  Par la suite, du matériel spécialisé fut envoyé pour la fabrication de camions échelles à incendie.
-                 <br/>
-                 Depuis, plus d’une cinquantaine de camions à incendie sont équipés d’échelles télescopiques RH en Corée du Sud.
-                </strong>
-</span>
-</p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color5_5">
-<strong>
-                 L‘année 2005 marque aussi l’implication active dans l’AMETVS (Association des Manufacturiers d’Équipements de Transport Véhicules Spécialisés) et Robert Desrosiers devint secrétaire du conseil d’administration. Un an plus tard, il est promu au titre de vice-président de ce conseil, et deux ans plus tard, il est élu président du C.A.
-                </strong>
-</span>
-</p>
-<p>
-<br/>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                 2006
-                </strong>
-</span>
-</p>
-<p class="moto-text_system_11">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color5_5">
-<strong>
-                 En 2006, Carl Desrosiers rejoint l’équipe de Robert Hydraulique, après avoir travaillé 6 ans en gestion de projets pour l’installateur de réseaux téléphoniques Expertech (Propriété de BCE). Ayant grandi dans le monde des engins élévateurs à nacelle depuis son tout jeune âge, Carl Desrosiers assure une continuité dans la direction de Robert Hydraulique inc. pour les décennies à venir.
-                </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                 2008
-                </strong>
-</span>
-</p>
-<p class="moto-text_system_11">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color5_5">
-<strong>
-                 Les nouveaux projets explosent chez le manufacturier d’équipements aériens : des échelles adaptées aux centres de ski, des projets spéciaux de plateformes et des remorques isolées, des équipements de câblodistribution (RH44T) ; et c’est en 2008 que la première nacelle avec seulement deux sections d’échelle (RHL37) voit le jour chez Robert Hydraulique inc.
-                </strong>
-</span>
-</p>
-</div>
-<img src="/media/2020/11/br-400-groomimg-ski-machine.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_13">
-<strong>
-<span class="moto-color5_5">
-                 Contexte historique
-                </span>
-</strong>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9" style="text-align: justify;">
-               C'est au mois d’octobre 1991 que Robert Desrosiers fonda Robert Hydraulique inc. ; son but était d’offrir un service d’entretien et de réparation de composantes hydrauliques et particulièrement de tout engin élévateur à nacelle. À ses débuts, Robert Hydraulique inc. ne comptait que trois employés dans un atelier de service de la rue Charles-Marchand à Le Gardeur, au Québec. C'est dans ces conditions que l'entreprise s'acquitta de son premier mandat d'envergure, soit le reconditionnement de plusieurs équipements à nacelle d’une entreprise majeure en télécommunication. Seulement deux ans plus tard, à la suite d’une croissance fulgurante, l’entreprise emménage dans de nouveaux locaux et emploie près d’une vingtaine de personnes.
-              </p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9" style="text-align: justify;">
-               Cette époque marque la naissance/ la création de la nacelle hydraulique qui révolutionnera le marché.
-               <br/>
-               En 1998, la compagnie Rentway rachète l’expertise de Robert Hydraulique inc. et elle reprend par la même occasion sa clientèle  (maintenant connue sous le nom de Penske). Robert Hydraulique inc. démarre son usine de fabrication après cinq années de recherches et développements et devient officiellement un manufacturier d’échelles aériennes hydrauliques.
-              </p>
-<p class="moto-text_system_9" style="text-align: justify;">
-</p>
-<p class="moto-text_system_9" style="text-align: justify;">
-               Le succès fut quasi instantané, dès la première année de nombreux utilisateurs ont reconnu la valeur ajoutée des nacelles RH.
-               <br/>
-               La qualité, la force, la sécurité et bien d’autres aspects de ces échelles hydrauliques se sont démarqués aux yeux des utilisateurs de camions nacelles.
-              </p>
-<p class="moto-text_system_9" style="text-align: justify;">
-               Au départ, les échelles télescopiques RH comptaient huit modèles (trois isolées et cinq non-isolées)  entre 35 et 50 pieds de hauteur de travail estimée.
-              </p>
-<p class="moto-text_system_9" style="text-align: justify;">
-<br/>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_14">
-<span class="moto-color5_5">
-<strong>
-                 Incendie d’un temple au cœur de Séoul où l’on peut apercevoir une échelle RH en action (en bas de l’image).
-                </strong>
-</span>
-</p>
-</div>
-<img src="/media/2020/11/incendie_seoul_57d587f0d8fdc.png" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_14">
-<span class="moto-color5_5">
-                Robert Desrosiers lors de la formation suite à la première livraison au Cameroun en juin 2009.
-               </span>
-</p>
-</div>
-<img src="/media/2020/11/robert_cameroun_57d5880c83ab9.png" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                 2009
-                </strong>
-</span>
-</p>
-<p class="moto-text_system_11">
-</p>
-<p class="moto-text_system_9">
-               Les premières ventes de camions nacelles pour l’Afrique sont survenues au début de l’année 2009. Une entreprise en électricité du Cameroun aura été la pionnière pour nos échelles télescopiques isolées.
-               <br/>
-               La qualité, la force et le côté diélectrique de la nacelle auront été des facteurs convaincants pour ces acquisitions. Vers la fin de cette année-là, l'équipe de RH renforça sa position de leader en développement en accueillant Aude Bélanger au département du développement et de l’ingénierie.
-              </p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                 2010
-                </strong>
-</span>
-</p>
-<p class="moto-text_system_11">
-</p>
-<p class="moto-text_system_9">
-               Nous avons également accueilli de nouveaux membres dans notre équipe !
-               <br/>
-               Nous avons accueilli Jonathan Lesage en charge des opérations. Jeune et remplie d'énergie, notre équipe est prête à conquérir le marché de l'équipement aérien.
-              </p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_203">
-<span class="moto-color1_3">
-                Conférence de presse et signature de l’entente entre RH et PLN.
-                <br/>
-                A droite : premier camion nacelle assemblé par les travailleurs de Surabaya
-               </span>
-</p>
-</div>
-<img src="/media/2020/11/surabaya.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9">
-<span class="moto-color5_5">
-                        Les équipements aériens RH font leurs premiers pas en Indonésie à la suite d’un long processus stratégique ; Robert Hydraulique inc. fonde de grands espoirs sur son avenir en Asie.
-                       </span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-             2011
-            </strong>
-</span>
-</p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color5_5">
-<strong>
-             En 2011, le gouvernement du Québec (CGER / Le Centre de gestion de l'équipement roulant) nous a approchés dans le but d'améliorer un produit existant bien trop lourd pour nos routes pendant la période des fortes décongélations. Nous devions trouver une solution afin de pouvoir travailler un mois ou deux supplémentaires.
-             <br/>
-             Toujours en quête de nouveaux défis, RH a pris le projet sous son aile et a développé un équipement similaire plus léger et plus perfectionné qui allait s'appeler RHP14. Cette unité n'est pas notre équipement habituel. Elle se compose d’une plateforme qui peut s'étirer sur le côté jusqu'à 16 pieds, avec une élévation de 26 degrés et il peut aller jusqu'à 14 pieds.
-            </strong>
-</span>
-</p>
-</div>
-<img src="/media/2020/11/thumbnails/truck-rh-ladder-boom-home-platforrm-signs_l_1200x474.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                 2012
-                </strong>
-</span>
-</p>
-<p class="moto-text_system_11">
-</p>
-<p class="moto-text_system_9">
-               2012 est l’année des avancements significatifs en Indonésie. Après de nombreuses visites de Carl Desrosiers et Robert Desrosiers en Asie du Sud-Est, RH établit un bureau basé à Jakarta, développe un partenariat d’affaire avec la compagnie Adicitra pour l’assemblage des nacelles RH dans des locaux situé à Surabaya, effectue la construction avec l’approbation d’un véhicule démonstrateur, qui celui-ci est laissé entre les mains des employés de la compagnie nationale d’électricité.  Les premières commandes significatives se concrétisent à la fin de l’année 2012 après trois années d’efforts et de travail soutenus avec diverses relations internationales.
-              </p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<b>
-                2013
-               </b>
-</p>
-<p class="moto-text_system_9">
-</p>
-</div>
-<img src="/media/2020/11/photo-usine-front-sm.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9">
-<span class="moto-color5_5">
-                    2013 a été pour Robert Hydraulique inc. une année décisive. De grands changements ont été apportés à RH afin de lui donner un nouvel élan et de passer à l’étape supérieure dans sa progression : créer de nouvelles opportunités et fixer de nouvelles normes.
-                   </span>
-</p>
-</div>
-<img src="/media/2020/11/robot-pic-eng_01.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9">
-<span class="moto-color1_3">
-            Une décision importante et nécessaire a été prise en 2013 afin d’étendre l’offre et proposer une gamme de produits encore plus innovants. RH Équipement a dû restreindre ses contrats externes de sous-traitance à la faveur de la production interne et ainsi de développer sa propre norme de contrôle de qualité.
-           </span>
-</p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color1_3">
-            Une nouvelle usine de production de 20 000 pieds carrés a été conçue pour accroître la capacité de production grandissante et assurer un rendement plus efficace.
-           </span>
-</p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color1_3">
-            De nombreux outils et l’ajout de nouvelles machines ont également été intégrés dans cette installation, tels qu’un robot soudeur, un usinage CNC, une table de découpe à jet d'eau 5 axis, des freins et bien plus encore.
-           </span>
-</p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color1_3">
-            Avec la nouvelle chaîne de production, RH Équipement a augmenté sa capacité de production six fois plus rapidement avec un meilleur contrôle de la qualité et une cadence supérieure.
-           </span>
-</p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color1_3">
-            Ces nouvelles dispositions ont donné un nouvel élan au développement de l’industrie et il en découlera un nouveau produit quelques années plus tard.
-           </span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-             2014
-            </strong>
-</span>
-</p>
-<p class="moto-text_system_11">
-</p>
-<p class="moto-text_system_9">
-<span class="moto-color5_5">
-<strong>
-             En 2014, la NAFFCO nous a contactés pour les aider à créer un camion à incendie plus rapide conçu pour leurs aéroports locaux.
-             <br/>
-             Voici un petit morceau d'histoire de la NAFFCO afin de vous montrer à quel point cette étape est importante pour nous.
-             <br/>
-             L’entreprise fondée à Dubaï, aux Émirats Arabes Unis, est devenue le premier producteur mondial et fournisseur de solutions en matière de sécurité à la personne. Ses dirigeants ont vu l'importance et l'utilité d'avoir facilement accès à de multiples services de sécurité, ils se sont ainsi spécialisés dans l'offre complète de solutions rassemblées sous une même bannière pour tous les types d'équipements de haute qualité de lutte contre l'incendie, les hôpitaux mobiles et les véhicules d’incendie pour les aéroports. C'est là que nous nous intervenons. Puisque nous sommes capables de monter nos unités sur des véhicules plus petits (plus rapides), nous avons installé une RHL37 sur un véhicule Ford avec notre panier en aluminium.
-            </strong>
-</span>
-</p>
-</div>
-<img src="/media/2020/11/thumbnails/truck-rh-ladder-boom-home-platforrm-signs_l_1200x474.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                 2015
-                </strong>
-</span>
-</p>
-<p class="moto-text_system_11">
-</p>
-<p class="moto-text_system_9">
-               En 2015, un nouveau défi nous attendait. C’est alors que la SOPFEU (Service aérien gouvernemental du Québec) nous fit la requête de dix véhicules RHS34. Ce modèle est pourvu d’un escalier qui s’autonivelle pour faciliter l’entretien d’un avion UN. Ces petites merveilles ont été distribuées à travers le Québec et plus particulièrement à l’aéroport Jean-Lesage.
-               <br/>
-               Le 31 juillet 2015, la Californie a vécu une terrible tragédie nommée le « Rough Fire », qui prit fin le 5 novembre 2015.
-               <br/>
-               C’est lors de cet évènement que la Californie fit appel à nos avions-citernes et s’en suivirent d’autres commandes pour la RHS34.
-              </p>
-</div>
-<img src="/media/2020/11/59aab0a807ca9.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9">
-<span class="moto-color5_5">
-                    C'est aussi un moyen pour les clients, les opérateurs et les utilisateurs d'identifier les fabricants et leurs produits issus de cet acier supérieur en plus d’une production contrôlée de qualité. Pour nous, c’est une bataille sans fin pour améliorer les performances de nos équipements, l'utilisation des produits en acier Strenx® et gagner en légèreté. Notre objectif étant d'affiner notre gamme de produits, nous savions qu'il fallait utiliser un acier plus léger et plus puissant qui puisse être utilisé pour des dimensions plus minces et plus fines. L'acier performant Strenx® a été la solution à ce défi. SSAB l'appelle « l’acier performant » car ses performances amplifiées vont au-delà d’un acier ordinaire à haute résistance. Avec l'acier Strenx®, nous pouvons accroître les charges, réduire la consommation de carburant et des émissions de CO2, ainsi les utilisateurs des échelles aériennes peuvent améliorer leurs activités en allant plus haut, plus loin et plus rapidement.
-                   </span>
-</p>
-</div>
-<img src="/media/2020/11/59aab22f5f372.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9" style="text-align: center;">
-<strong>
-                    Robert Desrosiers, Maurice Picard (SSAB), Jannie Chamberland (SSAB),  Aude Bélanger,  Jonathan Lesage,  Carl Desrosiers
-                   </strong>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                 2016
-                </strong>
-</span>
-</p>
-</div>
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9">
-                   « Innovation » serait le mot qui nous définit le mieux cette année-là. Pourquoi ? Afin de rehausser le niveau du jeu, RH a augmenté son équipe d'ingénierie pour finaliser, développer et créer de nouveaux produits. Avec notre département d'ingénierie, nous avons développé un concept novateur de distribution intégrale des équipements de levage aérien sur l'ensemble du véhicule, ce qui a engendré une résistance structurelle accrue de notre installation. En outre, plus de 50% du matériel de levage aérien a été optimisé pour ce concept :  la base, la plateforme et la structure interne afin de maximiser l'espace de chargement. Cette technique spécifique s'applique aujourd’hui sur le Sprinter (Mercedes ou Freightliner).
-                  </p>
-</div>
-<img src="/media/2020/11/rh-ladder-product-main-rh38d.jpg" alt="RH Equipment">
-<img src="/media/2020/11/gm-savana-front-aerial-ladder-boom.png" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9" style="text-align: justify;">
-                   Nous sommes également très fiers d'annoncer que nous sommes enfin en mesure d'installer nos équipements sur le Transit T350 et le GMC Savana 3500 dans le but de respecter à la lettre les réglementations (CSA, OSHA, DOT, ANSI et plus) et d'honorer le guide du constructeur de chaque véhicule. Nous avons aussi développé un système pour intégrer notre source d'énergie dans le sol pour maximiser l'espace de chargement et respecter les règlements (CMVSS / FMVSS 105 et 126) en ce qui concerne le centre de gravité.
-                  </p>
-</div>
-<img src="/media/2020/11/ford-transit-rhl37-aerial-ladder.png" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_13">
-<span class="moto-color5_5">
-                    Ford Transit
-                   </span>
-</p>
-</div>
-<img src="/media/2020/11/59aab0a807ca9.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_9">
-                   Avec une gamme de produits plus grande que jamais, RH a  développé le marché américain et étendu les horizons de la compagnie.
-                   <br/>
-                   De nouveaux distributeurs se sont ajoutés à la famille RH pour servir au mieux ce grand pays.
-                   <br/>
-                   Un équipement a été vendu au DPW d'Utica (NY) avec le distributeur des équipements de camion Kurtz.
-                  </p>
-<p class="moto-text_system_9">
-</p>
-<p class="moto-text_system_9">
-<a class="moto-link" data-action="url" href="https://www.liftupaerial.com/" target="_blank">
-                    LiftUP
-                   </a>
-                   , ayant établi une relation d'affaires initiée par RH dès ses débuts, agit en tant que force de vente B2B pour les équipements de levage aérien de RH, couvrant l'ensemble des États-Unis.
-                  </p>
-<p class="moto-text_system_9">
-                   La vision, la mission et les valeurs qui propulsent LiftUp en avant :
-                  </p>
-<p class="moto-text_system_9">
-                   Leur mission est de servir de force de vente pour des équipements de levage distinctifs, spécialisés et, surtout, de haute qualité ! À travers leur modèle d'entreprise, axé sur la fourniture d'un service client exceptionnel, une formation technique et l'établissement d'un réseau de service client fiable et véritablement efficace, ils visent à apporter de la valeur à leurs clients. Cultiver des relations durables et fondées sur la confiance, basées sur des stratégies gagnant-gagnant, est leur principe directeur.
-                  </p>
-<p class="moto-text_system_9">
-                   Leur objectif est de fournir à leurs clients des produits de haute qualité adaptés à leurs besoins actuels et futurs en matière d'équipements de levage. De plus, ils s'engagent à garantir la disponibilité de leurs produits à l'échelle nationale. De plus, leur principal moteur est de forger des partenariats durables et mutuellement bénéfiques avec leurs clients et fournisseurs.
-                  </p>
-<p class="moto-text_system_9">
-                   Leur ambition principale est d'introduire LiftUP sur le marché américain, de favoriser une collaboration solide avec de nombreux distributeurs et de collaborer avec eux pour assurer une croissance et un succès mutuellement rentables.
-                  </p>
-<p class="moto-text_system_9">
-                   Les distributeurs embrassent pleinement les valeurs de LiftUP pour fournir un service qui dépasse les attentes et les demandes des clients. Ils accordent la priorité à un service client accessible, professionnel et personnalisé. Chaque pièce d'équipement LiftUP subit un examen rigoureux en double et en triple pour garantir la sécurité et la fonctionnalité, car la sécurité des clients est primordiale !
-                  </p>
-<p class="moto-text_system_9">
-                   Leurs 5 valeurs fondamentales :
-                  </p>
-<p class="moto-text_system_9">
-                   Responsabilité / Collaboration / Engagement / Intégrité / Respect
-                  </p>
-<p>
-</p>
-</div>
-<img src="/media/2020/11/us-flag.png" alt="RH Equipment">
-<img src="/media/2024/03/liftup.png" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_203">
-<span class="moto-color5_5">
-                Et ce n'est pas tout ! Le 1er octobre est devenu une date importante pour Robert, Carl et Jonathan.
-               </span>
-</p>
-</div>
-<div aria-multiline="true" class="moto-widget-text-content moto-widget-text-editable" data-lt-tmp-id="lt-38114">
-<p class="moto-text_system_9" style="text-align: justify;">
-                   Après de nombreuses années à pousser la compagnie à son maximum, en prouvant une efficacité exceptionnelle et un professionnalisme éprouvé, Robert a pris la grande décision de donner un nouvel élan à l'entreprise. Il l’a vendue à son fils et au directeur des opérations. Depuis ce jour, Jonathan Lesage (avec RH depuis 2010) est le Président et Carl Desrosiers (avec RH depuis 2006) le Vice-Président de RH. Le schéma reste similaire : une équipe expérimentée, dévouée et impliquée avec une belle énergie à revendre est la clé de la réussite qui a amené le succès de l'entreprise. C’est même plus, c'est LA philosophie RH : sécurité, qualité et pérennité ! La seule chose qui a changé est le nom de la société pour « Les Équipements RH » au lieu de «Robert Hydraulique inc.» car, depuis, nous fabriquons bien plus que des échelles. Nous comptons, aujourd’hui, à notre actif environ vingt modèles RH différents isolés (diélectriques) et non isolés, des plateformes, des machines à nivellement automatique et vous trouvez toujours nos équipements classiques.
-                  </p>
-</div>
-<img src="/media/2020/11/rhladder-jonathan-lesage-carl-and-robert-desrosiers.jpg" alt="RH Equipment">
-<div class="moto-widget-text-content moto-widget-text-editable">
-<p class="moto-text_system_7">
-<span class="moto-color5_5">
-<strong>
-                 2017
-                </strong>
-</span>
-</p>
-</div>
-<div aria-multiline="true" class="moto-widget-text-content moto-widget-text-editable" data-lt-tmp-id="lt-296716">
-<p class="moto-text_system_9">
-                   Commençons 2017 avec un Bang !
-                   <br/>
-                   C'est lors d'une discussion entre RH Équipement Aérien inc. et Cisolift Distribution inc. que l'idée a germé de concevoir un accessoire d’équipement complètement nouveau et différent qui nous trottait dans la tête depuis quelques années. En association avec Cisolift, le manufacturier RH s'est surpassé et a développé ce tout nouveau produit qui répond à un besoin spécifique dont la demande n’a cessé de croître, mais pour lequel aucune solution n'existait jusqu’alors.
-                   <br/>
-                   Nous avons donc le plaisir d’accueillir aujourd’hui la « série RHR », une échelle aérienne intégrée à une remorque isolée disponible en trois modèles ! La série RHR combine la polyvalence d’une remorque rehaussable et la sécurité de l'isolation contre les chocs électriques.
-                  </p>
-<p class="moto-text_system_9">
-<span class="moto-content-image-plugin-wrapper moto-spacing-top-zero moto-spacing-right-zero moto-spacing-bottom-zero moto-spacing-left-zero">
-<span class="moto-content-image-container">
-<img alt="" class="moto-content-image" data-id="421" data-path="2020/11/cisolift-logo-web.png" height="100" src="/media/2020/11/cisolift-logo-web.png" width="301"/>
-</span>
-</span>
-</p>
-</div>
-<img src="/media/2020/11/rhr-serise-insulated-aerial-bucket-boom-ladder_.jpg" alt="RH Equipment">
+        <div class="prod-media">
+            <img src="/media/2020/11/rh-ladder-product-main-rh38d.jpg" alt="A propos: historique de Robert hydraulique / Les Équipements RH, fondée en 1991 RH s'est positionné comme un leader innovant dans l'industrie de la NAcelle echelle aérienne.">
+        </div>
+        <div class="prod-info">
+            <div class="prod-desc">
+                
+            </div>
+            <h3>Spécifications Techniques</h3>
+            <table class="specs-table">
+                
+            </table>
+            
+            <div style="margin-top: 3rem;">
+                <a href="https://rhed.ca/contact" class="elite-pill" style="display: inline-block; text-decoration: none;">Demander une soumission</a>
+            </div>
         </div>
     </main>
 
     <footer>
-        <div class="footer-logo"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png"></div>
-        <p>© 2026 RH Equipment - Expertise & Innovation</p>
-        <div class="lang-switch">
-            <a href="/fr/">Français</a> | <a href="/en/">English</a> | <a href="https://starh.ca/" target="_blank">Starh Service</a>
+        <img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 30px; margin-bottom: 1rem;">
+        <p>© 2026 RH Equipment. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/fr/">Français</a> | <a href="/en/">English</a> | <a href="https://starh.ca/">Starh Service</a>
         </div>
     </footer>
-
 </body>
 </html>
