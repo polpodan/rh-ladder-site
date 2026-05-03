@@ -73,10 +73,11 @@
         .section-header h2 { font-size: 2.5rem; font-weight: 800; text-transform: uppercase; margin-bottom: 1rem; }
         .section-header .line { width: 60px; height: 4px; background: var(--primary); margin: 0 auto; }
 
-        .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
         .pillar-card { 
-            position: relative; height: 500px; border-radius: 12px; overflow: hidden; 
+            position: relative; height: 550px; border-radius: 12px; overflow: hidden; 
             cursor: pointer; transition: var(--transition); border: 1px solid #eee;
+            text-decoration: none; display: block;
         }
         .pillar-card img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
         .pillar-overlay { 
@@ -152,31 +153,38 @@
 
     <section class="section" id="produits">
         <div class="section-header">
-            <h2>Nos Piliers</h2>
+            <h2>Nos Solutions</h2>
             <div class="line"></div>
         </div>
         <div class="pillars-grid">
-            <div class="pillar-card">
+            <a href="/fr/catalogue-isole/" class="pillar-card">
                 <img src="/media/2020/11/rh-ladder-product-main-rh38d.jpg" alt="Série Isolée">
                 <div class="pillar-overlay">
                     <h3>Série Isolée</h3>
-                    <p>Sécurité maximale pour les réseaux électriques. Jusqu'à 50 pieds de hauteur de travail.</p>
+                    <p>Sécurité maximale pour les réseaux électriques.</p>
                 </div>
-            </div>
-            <div class="pillar-card">
+            </a>
+            <a href="/fr/catalogue-non-isole/" class="pillar-card">
                 <img src="/media/2020/11/product-lg-rh38-aerila-ladder.jpg" alt="Série Non-Isolée">
                 <div class="pillar-overlay">
                     <h3>Série Non-Isolée</h3>
-                    <p>Performance et légèreté. Le choix idéal pour la maintenance urbaine et les enseignes.</p>
+                    <p>Performance et légèreté urbaine.</p>
                 </div>
-            </div>
-            <div class="pillar-card">
+            </a>
+            <a href="/fr/catalogue-specialise/" class="pillar-card">
                 <img src="/media/2020/11/product-lg-rhr-towable-unit-insulated.jpg" alt="Unités Spécialisées">
                 <div class="pillar-overlay">
                     <h3>Unités Spécialisées</h3>
-                    <p>Solutions remorquables et systèmes d'escaliers télescopiques sur-mesure.</p>
+                    <p>Solutions remorquables et sur-mesure.</p>
                 </div>
-            </div>
+            </a>
+            <a href="/fr/options-et-accessoires/" class="pillar-card">
+                <img src="/media/2020/11/battery-tray-bucket.jpg" alt="Options & Accessoires">
+                <div class="pillar-overlay">
+                    <h3>Options & Accessoires</h3>
+                    <p>Personnalisez votre unité selon vos besoins.</p>
+                </div>
+            </a>
         </div>
     </section>
 

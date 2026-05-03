@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options & Accessoires | RH Equipment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #fda40a; --secondary: #121212; --white: #ffffff; --text: #1a1a1a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); }
+        
+        nav { background: var(--secondary); padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo img { height: 40px; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--white); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+
+        .hero-cat { padding: 6rem 5%; background: #f4f4f4; text-align: center; border-bottom: 4px solid var(--primary); }
+        .hero-cat h1 { font-size: 3rem; font-weight: 800; text-transform: uppercase; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 5rem 5%; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+        .product-card { text-decoration: none; color: inherit; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-img { height: 250px; background: #eee; border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; }
+        .product-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; border-left: 4px solid var(--primary); padding-left: 1rem; }
+        .product-card p { font-size: 0.95rem; color: #666; }
+
+        footer { background: var(--secondary); color: white; padding: 4rem 5%; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="/fr/"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png"></a></div>
+        <ul class="nav-links">
+            <li><a href="/fr/">Accueil</a></li>
+            <li><a href="/fr/catalogue-isole/">Isolées</a></li>
+            <li><a href="/fr/catalogue-non-isole/">Non-Isolées</a></li>
+            <li><a href="/fr/catalogue-specialise/">Spécialisées</a></li>
+            <li><a href="/fr/options-et-accessoires/">Options</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-cat">
+        <h1>Options & Accessoires</h1>
+    </header>
+
+    <main class="container">
+        <div class="product-grid">
+            
+            <a href="/fr/options-et-accessoires/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/orb-icon-green.png" alt="Unités Électriques"></div>
+                <h3>Unités Électriques</h3>
+                <p>Systèmes de batteries auxiliaires silencieux.</p>
+            </a>
+        
+            <a href="/fr/options-et-accessoires/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/robot-cell.jpg" alt="Soudure Robotisée"></div>
+                <h3>Soudure Robotisée</h3>
+                <p>Précision et durabilité accrue.</p>
+            </a>
+        
+            <a href="/fr/options-et-accessoires/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/battery-tray-bucket.jpg" alt="Supports d'outils"></div>
+                <h3>Supports d'outils</h3>
+                <p>Aménagements personnalisés pour techniciens.</p>
+            </a>
+        
+            <a href="/fr/options-et-accessoires/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/orb-icon-remote.png" alt="Télécommandes sans fil"></div>
+                <h3>Télécommandes sans fil</h3>
+                <p>Contrôle à distance sécurisé.</p>
+            </a>
+        
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 RH Equipment. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

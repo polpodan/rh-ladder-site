@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacelles Non-Isolées | RH Equipment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #fda40a; --secondary: #121212; --white: #ffffff; --text: #1a1a1a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); }
+        
+        nav { background: var(--secondary); padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo img { height: 40px; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--white); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+
+        .hero-cat { padding: 6rem 5%; background: #f4f4f4; text-align: center; border-bottom: 4px solid var(--primary); }
+        .hero-cat h1 { font-size: 3rem; font-weight: 800; text-transform: uppercase; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 5rem 5%; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+        .product-card { text-decoration: none; color: inherit; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-img { height: 250px; background: #eee; border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; }
+        .product-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; border-left: 4px solid var(--primary); padding-left: 1rem; }
+        .product-card p { font-size: 0.95rem; color: #666; }
+
+        footer { background: var(--secondary); color: white; padding: 4rem 5%; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="/fr/"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png"></a></div>
+        <ul class="nav-links">
+            <li><a href="/fr/">Accueil</a></li>
+            <li><a href="/fr/catalogue-isole/">Isolées</a></li>
+            <li><a href="/fr/catalogue-non-isole/">Non-Isolées</a></li>
+            <li><a href="/fr/catalogue-specialise/">Spécialisées</a></li>
+            <li><a href="/fr/options-et-accessoires/">Options</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-cat">
+        <h1>Nacelles Non-Isolées</h1>
+    </header>
+
+    <main class="container">
+        <div class="product-grid">
+            
+            <a href="/fr/rh35-fr-echelle-nacelle-aerienne/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/sticker-nacelles-rh35.png" alt="RH35"></div>
+                <h3>RH35</h3>
+                <p>Légèreté et versatilité pour les petits camions.</p>
+            </a>
+        
+            <a href="/fr/rhl37-fr-echelle-nacelle-aerienne/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/ford-transit-rhl37-aerial-ladder.png" alt="RHL37 Van Ladder"></div>
+                <h3>RHL37 Van Ladder</h3>
+                <p>Optimisée pour les fourgonnettes de service.</p>
+            </a>
+        
+            <a href="/fr/rh38-fr-echelle-nacelle-aerienne/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/product-lg-rh38-aerila-ladder.jpg" alt="RH38"></div>
+                <h3>RH38</h3>
+                <p>Le classique de la maintenance urbaine.</p>
+            </a>
+        
+            <a href="/fr/rh41-ladder-boom/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/sticker-nacelles-rh41.png" alt="RH41"></div>
+                <h3>RH41</h3>
+                <p>Compromis idéal entre portée et compacité.</p>
+            </a>
+        
+            <a href="/fr/rh44-fr-echelle-nacelle-aerienne/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/sticker-nacelles-rh44.png" alt="RH44"></div>
+                <h3>RH44</h3>
+                <p>Performance robuste pour les travaux intensifs.</p>
+            </a>
+        
+            <a href="/fr/rh47-fr-echelle-nacelle-aerienne/" class="product-card">
+                <div class="product-img"><img src="/media/2020/11/sticker-nacelles-rh47.png" alt="RH47"></div>
+                <h3>RH47</h3>
+                <p>Hauteur maximale en version non-isolée.</p>
+            </a>
+        
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 RH Equipment. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
