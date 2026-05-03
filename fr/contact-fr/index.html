@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | RH Equipment</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #fda40a; --secondary: #121212; --white: #ffffff; }
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Contact | RH Equipment
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root { --primary: #fda40a; --secondary: #121212; --white: #ffffff; }
         body { font-family: 'Inter', sans-serif; margin: 0; background: #fff; }
         nav { background: var(--secondary); padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index:1000; }
         .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
@@ -22,47 +24,98 @@
         button:hover { filter: brightness(1.1); }
         
         footer { background: var(--secondary); color: white; padding: 3rem; text-align: center; }
-    </style>
-</head>
-<body>
-    <nav>
-        <div class="logo"><a href="/fr/"><img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 40px;"></a></div>
-        <ul class="nav-links">
-    <li><a href="/fr/">Accueil</a></li>
-    <li><a href="/fr/catalogue-isole/">Produits</a></li>
-    <li><a href="/fr/galerie-photo/">Galerie</a></li>
-    <li><a href="https://starh.ca/" target="_blank">Services</a></li>
-    <li><a href="/fr/carriere/">Carrière</a></li>
-    <li><a href="/fr/contact-fr/">Contact</a></li>
-<li><a href="https://rhed.ca/" target="_blank" class="elite-pill">Elite</a></li></ul>
-    </nav>
-    <div class="container">
-        <center><h1>Contactez-nous</h1></center>
-        <p>Pour toute demande de service ou de recrutement, veuillez remplir le formulaire ci-dessous.</p>
-        
-        <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="to" value="recrutement@rh-ladder.com" />
-            
-            <div class="form-group">
-                <label>Nom Complet</label>
-                <input type="text" name="name" required placeholder="Votre nom">
-            </div>
-            <div class="form-group">
-                <label>Téléphone</label>
-                <input type="tel" name="phone" required placeholder="Votre numéro">
-            </div>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" required placeholder="votre@email.com">
-            </div>
-            <div class="form-group">
-                <label>Message</label>
-                <textarea name="message" rows="5" required placeholder="Comment pouvons-nous vous aider ?"></textarea>
-            </div>
-            <button type="submit">Envoyer le message</button>
-        </form>
+  </style>
+ </head>
+ <body>
+  <nav>
+   <div class="logo">
+    <a href="/fr/">
+     <img src="/media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 40px;"/>
+    </a>
+   </div>
+   <ul class="nav-links">
+    <li>
+     <a href="/fr/">
+      Accueil
+     </a>
+    </li>
+    <li>
+     <a href="/fr/#produits">
+      Produits
+     </a>
+    </li>
+    <li>
+     <a href="/fr/galerie-photo/">
+      Galerie
+     </a>
+    </li>
+    <li>
+     <a href="https://starh.ca/" target="_blank">
+      Services
+     </a>
+    </li>
+    <li>
+     <a href="/fr/carriere/">
+      Carrière
+     </a>
+    </li>
+    <li>
+     <a href="/fr/contact-fr/">
+      Contact
+     </a>
+    </li>
+    <li>
+     <a class="elite-pill" href="https://rhed.ca/" target="_blank">
+      Elite
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <div class="container">
+   <center>
+    <h1>
+     Contactez-nous
+    </h1>
+   </center>
+   <p>
+    Pour toute demande de service ou de recrutement, veuillez remplir le formulaire ci-dessous.
+   </p>
+   <form data-netlify="true" method="POST" name="contact">
+    <input name="form-name" type="hidden" value="contact"/>
+    <input name="to" type="hidden" value="recrutement@rh-ladder.com"/>
+    <div class="form-group">
+     <label>
+      Nom Complet
+     </label>
+     <input name="name" placeholder="Votre nom" required="" type="text"/>
     </div>
-    <footer><p>© 2026 RH Equipment</p></footer>
-</body>
+    <div class="form-group">
+     <label>
+      Téléphone
+     </label>
+     <input name="phone" placeholder="Votre numéro" required="" type="tel"/>
+    </div>
+    <div class="form-group">
+     <label>
+      Email
+     </label>
+     <input name="email" placeholder="votre@email.com" required="" type="email"/>
+    </div>
+    <div class="form-group">
+     <label>
+      Message
+     </label>
+     <textarea name="message" placeholder="Comment pouvons-nous vous aider ?" required="" rows="5"></textarea>
+    </div>
+    <button type="submit">
+     Envoyer le message
+    </button>
+   </form>
+  </div>
+  <footer>
+   <p>
+    © 2026 RH Equipment
+   </p>
+  </footer>
+ </body>
 </html>
