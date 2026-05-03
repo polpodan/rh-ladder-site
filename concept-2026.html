@@ -27,14 +27,13 @@
         nav {
             position: fixed; top: 0; width: 100%; z-index: 1000;
             display: flex; justify-content: space-between; align-items: center;
-            padding: 1.5rem 5%; background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 1.2rem 5%; background: var(--secondary);
+            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1);
             transition: var(--transition);
         }
-        .logo img { height: 45px; filter: invert(1); }
-        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
+        .logo img { height: 45px; }
         .nav-links a { 
-            text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.8rem; 
+            text-decoration: none; color: var(--white); font-weight: 600; font-size: 0.8rem; 
             text-transform: uppercase; letter-spacing: 1.5px; position: relative;
         }
         .nav-links a::after {
