@@ -77,6 +77,15 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
         }
+   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; text-align: left; }
+        .footer-col h5 { color: var(--primary); font-weight: 800; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col li { margin-bottom: 1rem; }
+        .footer-col a { color: #888; text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
+        .footer-col a:hover { color: #fff; }
+        .copyright { border-top: 1px solid #222; padding-top: 2rem; text-align: center; font-size: 0.8rem; color: #555; margin-top: 4rem; }
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
   </style>
  </head>
  <body>
@@ -247,8 +256,8 @@
      </p>
     </div>
    </div>
-   <div class="copyright" style="border-top: 1px solid #222; padding-top: 2rem; text-align: center; font-size: 0.8rem; color: #555; margin-top: 4rem;">
-    © 2026 RH Equipment. Tous droits réservés. Design by WEB Lesage image concept.
+   <div class="copyright">
+    © 2026 RH Equipment. Tous droits réservés.
    </div>
   </footer>
  </body>
