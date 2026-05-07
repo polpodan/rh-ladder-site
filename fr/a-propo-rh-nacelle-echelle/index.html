@@ -6,29 +6,73 @@
     <title>À Propos | RH Équipement</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {{ --primary: #fda40a; --secondary: #121212; --text: #1a1a1a; --white: #ffffff; }}
-        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-        body {{ font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }}
-        nav {{ position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--secondary); color: white; border-bottom: 1px solid rgba(255,255,255,0.1); }}
-        .logo img {{ height: 40px; }}
-        .nav-links {{ display: flex; list-style: none; gap: 2rem; align-items: center; }}
-        .nav-links a {{ text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }}
-        .elite-pill {{ background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }}
-        .hero-sub {{ padding: 6rem 5%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/rh-ladder-site/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg'); background-size: cover; background-position: center; color: white; text-align: center; border-bottom: 4px solid var(--primary); }}
-        .hero-sub h1 {{ font-size: 3rem; font-weight: 900; text-transform: uppercase; }}
-        .container {{ max-width: 1000px; margin: 4rem auto; padding: 0 5%; }}
-        .about-grid {{ display: flex; gap: 4rem; flex-wrap: wrap; align-items: center; }}
-        .about-text {{ flex: 1.5; min-width: 350px; }}
-        .about-img {{ flex: 1; min-width: 300px; }}
-        .about-img img {{ width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }}
-        h2 {{ font-size: 2rem; margin: 2rem 0 1rem; color: var(--secondary); border-left: 5px solid var(--primary); padding-left: 1rem; text-transform: uppercase; }}
-        p {{ font-size: 1.1rem; margin-bottom: 1.5rem; color: #444; }}
-        .highlight {{ color: var(--primary); font-weight: 700; }}
-        footer {{ background: #0a0a0a; color: white; padding: 3rem; text-align: center; margin-top: 5rem; }}
-        @media (max-width: 768px) {{ .nav-links {{ display: none; }} }}
+        :root { 
+            --primary: #fda40a; 
+            --secondary: #121212; 
+            --text: #1a1a1a; 
+            --white: #ffffff; 
+            --light-bg: #f9f9f9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.7; background: var(--white); }
+
+        /* Navigation */
+        nav { position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--secondary); color: white; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo img { height: 40px; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+        .elite-pill { background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }
+
+        /* Hero */
+        .hero-about { 
+            padding: 8rem 5%; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/rh-ladder-site/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            text-align: center; 
+            border-bottom: 5px solid var(--primary);
+        }
+        .hero-about h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Sections */
+        .section { padding: 6rem 10%; }
+        .section-alt { background-color: var(--light-bg); }
+        .container-flex { display: flex; gap: 5rem; align-items: center; flex-wrap: wrap; }
+        .flex-text { flex: 1.2; min-width: 350px; }
+        .flex-img { flex: 1; min-width: 300px; }
+        .flex-img img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); border: 1px solid #eee; }
+
+        h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 2rem; color: var(--secondary); text-transform: uppercase; position: relative; display: inline-block; }
+        h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 5px; background: var(--primary); }
+        
+        p { font-size: 1.15rem; margin-bottom: 1.5rem; color: #333; text-align: justify; }
+        .highlight { color: var(--primary); font-weight: 800; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-top: 4rem; }
+        .stat-item { text-align: center; }
+        .stat-number { display: block; font-size: 3rem; font-weight: 900; color: var(--primary); line-height: 1; }
+        .stat-label { font-size: 0.9rem; text-transform: uppercase; font-weight: 700; color: #666; letter-spacing: 1px; }
+
+        /* Footer */
+        footer { background: #0a0a0a; color: white; padding: 4rem 5% 2rem; text-align: center; }
+        .footer-logo img { height: 40px; margin-bottom: 2rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; opacity: 0.5; font-size: 0.8rem; }
+        .footer-links a { color: white; text-decoration: none; }
+
+        @media (max-width: 992px) {
+            .section { padding: 4rem 5%; }
+            .container-flex { gap: 3rem; }
+            h2 { font-size: 1.8rem; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="logo"><a href="/rh-ladder-site/fr/"><img src="/rh-ladder-site/media/2023/12/rh-logo-aerila-lift-fr-wht.png"></a></div>
         <ul class="nav-links">
@@ -41,26 +85,83 @@
             <li><a href="https://rhed.ca/" target="_blank" class="elite-pill">Elite</a></li>
         </ul>
     </nav>
-    <header class="hero-sub"><h1>Notre Histoire</h1></header>
-    <main class="container">
-        <div class="about-grid">
-            <div class="about-text">
-                <h2>L'Ingénierie Québécoise depuis 1991</h2>
-                <p>Fondée en 1991 par Robert Hydraulique, <span class="highlight">Les Équipements RH</span> s'est imposée comme un leader mondial innovant dans l'industrie de la nacelle échelle aérienne. Basée à Lanoraie, Québec, l'entreprise conçoit des solutions de levage de haute précision pour les secteurs des télécommunications, de l'électricité et de la signalisation.</p>
-                
-                <h2>Innovation et Performance (2024-2026)</h2>
-                <p>Aujourd'hui, RH Equipment franchit une nouvelle étape avec le lancement de sa <span class="highlight">Division Élite (RHED)</span>. Nous introduisons des unités 100 % électriques montées sur des châssis 4x4 compacts, répondant aux défis environnementaux de demain sans compromettre la puissance.</p>
-                
-                <p>Grâce à l'utilisation exclusive d'acier <span class="highlight">STRENX®</span> haute résistance et à la technologie <span class="highlight">Ozone-tech</span> pour la gestion des batteries auxiliaires, nos nacelles sont les plus légères et les plus stables du marché.</p>
-                
-                <h2>Engagement Qualité</h2>
-                <p>Chaque unité produite dans nos usines bénéficie d'une précision de niveau aéronautique grâce à notre <span class="highlight">soudure robotisée</span> et à la découpe au jet d'eau, garantissant une fiabilité et une sécurité inégalées pour les techniciens sur le terrain.</p>
+
+    <header class="hero-about">
+        <h1>Plus de 35 ans d'Innovation</h1>
+    </header>
+
+    <!-- Section 1: History -->
+    <section class="section">
+        <div class="container-flex">
+            <div class="flex-text">
+                <h2>L'Origine du Succès</h2>
+                <p>Fondée en <span class="highlight">1991</span> par l'équipe visionnaire de Robert Hydraulique, l'entreprise s'est donnée une mission claire : redéfinir les standards de l'industrie des nacelles aériennes. Ce qui n'était au départ qu'un atelier spécialisé est devenu en trois décennies un <span class="highlight">leader mondial</span> reconnu pour son ingénierie de précision.</p>
+                <p>Basés à Lanoraie, au Québec, nous concevons, fabriquons et assemblons des unités qui parcourent aujourd'hui les routes de toute l'Amérique du Nord et bien au-delà. Notre force réside dans notre capacité à écouter les techniciens sur le terrain pour leur offrir l'outil de travail ultime.</p>
             </div>
-            <div class="about-img">
-                <img src="/rh-ladder-site/media/2020/11/product-rh-ladder-50d-lg_59adc9f424d0b_5fbd74152c128.jpg" alt="RH Innovation">
+            <div class="flex-img">
+                <img src="/rh-ladder-site/media/2020/11/base-rh-low-profile_57dc0a438dbfa.jpg" alt="Atelier RH Equipment">
             </div>
         </div>
-    </main>
-    <footer><p>© 2026 RH Equipment. Tous droits réservés.</p></footer>
+    </section>
+
+    <!-- Section 2: Technology & Future -->
+    <section class="section section-alt">
+        <div class="container-flex" style="flex-direction: row-reverse;">
+            <div class="flex-text">
+                <h2>L'Ère de l'Élite (2024-2026)</h2>
+                <p>Le futur de RH Equipment s'écrit aujourd'hui avec le lancement de la <span class="highlight">Division Élite (RHED)</span>. Cette nouvelle branche représente le sommet de notre savoir-faire, introduisant des unités <span class="highlight">100% électriques</span> capables d'opérer dans les environnements les plus hostiles avec un silence et une propreté inégalés.</p>
+                <p>En intégrant l'acier <span class="highlight">STRENX®</span> haute performance, nous avons réussi le tour de force de réduire le poids de nos structures de 40% tout en augmentant leur durabilité. Couplé à notre technologie exclusive <span class="highlight">Ozone-tech</span>, nous offrons une gestion d'énergie éco-responsable qui permet de travailler sans laisser tourner le moteur du véhicule porteur.</p>
+            </div>
+            <div class="flex-img">
+                <img src="/rh-ladder-site/media/2025/06/p68czeoz.jpg" alt="Innovation RH Elite">
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">35+</span>
+                <span class="stat-label">Années d'expertise</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">40%</span>
+                <span class="stat-label">Moins de poids (Strenx)</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Électrique (Série Elite)</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">QC</span>
+                <span class="stat-label">Fierté Québécoise</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Commitment -->
+    <section class="section">
+        <div class="container-flex">
+            <div class="flex-text">
+                <h2>Précision Aéronautique</h2>
+                <p>Chez RH, nous ne faisons aucune concession sur la qualité. Nos processus de fabrication incluent la <span class="highlight">découpe au jet d'eau</span> de haute précision et la <span class="highlight">soudure robotisée</span>. Chaque joint, chaque soudure et chaque composant est inspecté pour répondre aux normes de sécurité les plus strictes de l'industrie électrique et des télécommunications.</p>
+                <p>Nous sommes fiers de soutenir l'économie locale tout en rayonnant à l'international, en offrant des solutions qui protègent la vie des travailleurs en hauteur chaque jour.</p>
+            </div>
+            <div class="flex-img">
+                <img src="/rh-ladder-site/media/2020/11/robot-cell.jpg" alt="Soudure Robotisée RH">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="/rh-ladder-site/media/2023/12/rh-logo-aerila-lift-fr-wht.png" alt="RH Logo">
+        </div>
+        <p>© 2026 RH Equipment. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="/rh-ladder-site/fr/">Français</a> | 
+            <a href="/rh-ladder-site/en/">English</a> | 
+            <a href="https://starh.ca/" target="_blank">Starh Service</a>
+        </div>
+    </footer>
+
 </body>
 </html>
