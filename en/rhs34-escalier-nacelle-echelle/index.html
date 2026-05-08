@@ -19,12 +19,21 @@
         .elite-pill { background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }
         .hero-sub { padding: 6rem 5%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/rh-ladder-site/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg'); background-size: cover; background-position: center; color: white; text-align: center; border-bottom: 4px solid var(--primary); }
         .hero-sub h1 { font-size: 3rem; font-weight: 900; text-transform: uppercase; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; }
+        
+        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        
+        
+        
+        .specs-table td { padding: 1.2rem 1rem; border-bottom: 1px solid #eee; }
+        
+
         footer { background: #0a0a0a; color: white; padding: 4rem 5% 2rem; text-align: center; margin-top: 5rem; }
         
-        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+        
         .specs-table td { padding: 0.8rem 1rem; border-bottom: 1px solid #eee; }
-        .spec-label { font-weight: 700; color: var(--secondary); width: 45%; }
+        
         .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .drawing-sec { width: 100%; margin-top: 4rem; border-top: 1px solid #eee; padding-top: 2rem; }
         .drawing-sec img { max-width: 800px; display: block; margin: 0 auto; }
@@ -139,7 +148,16 @@
 
         @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 768px) { .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr; } }
-   .prod-desc { text-align: justify; }
+   
+  
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; }
+        .prod-media { flex: 1; min-width: 400px; }
+        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .prod-info { flex: 1.2; min-width: 400px; }
+        .prod-desc { margin-bottom: 3rem; font-size: 1.1rem; color: #444; text-align: justify; }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+        .specs-table td { padding: 1.2rem 1rem; border-bottom: 1px solid #eee; }
+        .spec-label { font-weight: 700; color: var(--secondary); width: 45%; background: #fcfcfc; }
   </style>
  </head>
  <body>
@@ -193,117 +211,6 @@
    </h1>
   </header>
   <main class="container">
-   <main class="container">
-    <div class="prod-media">
-     <img src="/rh-ladder-site/media/2020/11/product-lg-rhs34-aerial-stairs-auto-levelling-airplane.jpg"/>
-     <h3>
-      Technical Specifications
-     </h3>
-     <table class="specs-table">
-      <tr>
-       <td class="spec-label">
-        Working height (A)
-       </td>
-       <td>
-        10.3m (34')
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Horizontal reach (B)
-       </td>
-       <td>
-        8.51m (27' 11")
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Retracted length (C)
-       </td>
-       <td>
-        4.97m (16' 4")
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Interior width (D)
-       </td>
-       <td>
-        60 cm (23")
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Bucket capacity
-       </td>
-       <td>
-        159 kg (350 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Lifting ring
-       </td>
-       <td>
-        250 kg (550 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Rotation
-       </td>
-       <td>
-        360° continue
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Elevation
-       </td>
-       <td>
-        -0° à 85°
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Approx. weight
-       </td>
-       <td>
-        567 kg (1250 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Min. GVWR
-       </td>
-       <td>
-        4309 kg (9500 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Hydraulic pressure
-       </td>
-       <td>
-        20684 kPa (3000 psi)
-       </td>
-      </tr>
-     </table>
-    </div>
-    <div class="prod-info">
-     <div class="prod-desc">
-      <p>
-       Designed for aerospace and aircraft maintenance. Provides secure stair access that remains constant regardless of the ladder angle.
-      </p>
-     </div>
-    </div>
-    <div class="drawing-sec">
-     <h3>
-      Dessin Technique &amp; Dimensions
-     </h3>
-     <img src="/rh-ladder-site/media/2020/11/framespec.png"/>
-    </div>
-   </main>
   </main>
   <footer>
    <div class="footer-grid">

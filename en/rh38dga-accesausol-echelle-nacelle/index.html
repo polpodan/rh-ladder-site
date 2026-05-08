@@ -19,12 +19,21 @@
         .elite-pill { background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }
         .hero-sub { padding: 6rem 5%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/rh-ladder-site/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg'); background-size: cover; background-position: center; color: white; text-align: center; border-bottom: 4px solid var(--primary); }
         .hero-sub h1 { font-size: 3rem; font-weight: 900; text-transform: uppercase; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; }
+        
+        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        
+        
+        
+        .specs-table td { padding: 1.2rem 1rem; border-bottom: 1px solid #eee; }
+        
+
         footer { background: #0a0a0a; color: white; padding: 4rem 5% 2rem; text-align: center; margin-top: 5rem; }
         
-        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+        
         .specs-table td { padding: 0.8rem 1rem; border-bottom: 1px solid #eee; }
-        .spec-label { font-weight: 700; color: var(--secondary); width: 45%; }
+        
         .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .drawing-sec { width: 100%; margin-top: 4rem; border-top: 1px solid #eee; padding-top: 2rem; }
         .drawing-sec img { max-width: 800px; display: block; margin: 0 auto; }
@@ -139,7 +148,16 @@
 
         @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 768px) { .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr; } }
-   .prod-desc { text-align: justify; }
+   
+  
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; }
+        .prod-media { flex: 1; min-width: 400px; }
+        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .prod-info { flex: 1.2; min-width: 400px; }
+        .prod-desc { margin-bottom: 3rem; font-size: 1.1rem; color: #444; text-align: justify; }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+        .specs-table td { padding: 1.2rem 1rem; border-bottom: 1px solid #eee; }
+        .spec-label { font-weight: 700; color: var(--secondary); width: 45%; background: #fcfcfc; }
   </style>
  </head>
  <body>
@@ -193,134 +211,6 @@
    </h1>
   </header>
   <main class="container">
-   <main class="container">
-    <div class="prod-media">
-     <img src="/rh-ladder-site/media/2020/11/ground-access.jpg"/>
-     <h3>
-      Technical Specifications
-     </h3>
-     <table class="specs-table">
-      <tr>
-       <td class="spec-label">
-        Working height (A)
-       </td>
-       <td>
-        11.58m (38')
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Horizontal reach (B)
-       </td>
-       <td>
-        8.39m (27'6")
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Accès au sol
-       </td>
-       <td>
-        Direct depuis le panier
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Retracted length (C)
-       </td>
-       <td>
-        4.56m (15')
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Interior width (D)
-       </td>
-       <td>
-        49 cm (19")
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Bucket capacity
-       </td>
-       <td>
-        159 kg (350 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Lifting ring
-       </td>
-       <td>
-        250 kg (550 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Rotation
-       </td>
-       <td>
-        360° continue (opt.)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Elevation
-       </td>
-       <td>
-        -8° à 80°
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Approx. weight
-       </td>
-       <td>
-        567 kg (1250 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Hydraulic pressure
-       </td>
-       <td>
-        20684 kPa (3000 psi)
-       </td>
-      </tr>
-     </table>
-    </div>
-    <div class="prod-info">
-     <div class="prod-desc">
-      <p>
-       <span>
-        The RH38DGA is an insulated telescopic ladder with a working height of 38 feet (11.58 m). Featuring a "Goose Neck" and three sections ladder for extra efficiency, the RH38DGA is ideal for businesses that require ground access. A side door to the bucket allows you to climb into the basket from the bumper or the ground. This model is an unmatched product on the market.
-        <br/>
-        The lifting ring located at the end of the second section is a standard accessory that can lift loads of 500 pounds (250 kg) (opt.) in any position, regardless of the carrying vehicle. True to RH standards, we offer a range of products with maximized capabilities such as cargo space, payload and basket capacity. This will vary depending on the model of the vehicle. The 3-section design makes your unit more stable and stiffer when extended, for unparalleled ease of use. You want to work with even more precision? Ask about our 2-speed option.
-        <br/>
-        This fully electric unit can be mounted on different chassis and is designed with a swivel platform at the base of the ladder to facilitate evacuation in any position.
-        <br/>
-        The GA "Ground Access" Series is available on all our dielectric models.
-       </span>
-      </p>
-      <p>
-       <span>
-        The connection of the auxiliary battery isolates the vehicle’s aerial lift equipment. The unit will work without the vehicle engine on. In any case, it will affect the vehicle’s battery; it is actually an additional security because if the truck’s battery needs a little “boost”, due to the type of connection, it can feed of the auxiliary battery. All our units have a two-way splitter between the auxiliary battery and the vehicle. We make no modification to your vehicle, only a wire is connected to the alternator which is used to recharge the auxiliary battery when the vehicle is running.
-       </span>
-      </p>
-      <p>
-       <span>
-        In addition, we can provide additional security by adding a system such as Ozone-tech. This product requires removing the keys from the ignition; press an activator button to operate the unit. Ozone-tech is perfect for fleet owners that want to have some control over the fuel consumption. The system ensures optimum battery management and will turn on the engine if the vehicle needs to recharge the battery to its maximum capacity.
-       </span>
-      </p>
-      <p>
-       <span>
-        Accuracy is crucial to achieve consistent quality. RH Ladder uses water jet and laser cutting, along with robotic welding, to deliver constant precision and reliability.
-       </span>
-      </p>
-     </div>
-    </div>
-   </main>
    <div style="background: #fff9eb; border-left: 5px solid #fda40a; padding: 1.5rem; margin-top: 4rem; width: 100%; clear: both; font-size: 0.95rem; color: #444; border-radius: 4px;">
     <h4 style="margin-top: 0; color: #1a1a1a; text-transform: uppercase; font-weight: 800; font-size: 0.9rem;">
      Important Note

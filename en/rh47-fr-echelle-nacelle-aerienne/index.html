@@ -19,12 +19,21 @@
         .elite-pill { background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }
         .hero-sub { padding: 6rem 5%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/rh-ladder-site/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg'); background-size: cover; background-position: center; color: white; text-align: center; border-bottom: 4px solid var(--primary); }
         .hero-sub h1 { font-size: 3rem; font-weight: 900; text-transform: uppercase; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; }
+        
+        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        
+        
+        
+        .specs-table td { padding: 1.2rem 1rem; border-bottom: 1px solid #eee; }
+        
+
         footer { background: #0a0a0a; color: white; padding: 4rem 5% 2rem; text-align: center; margin-top: 5rem; }
         
-        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+        
         .specs-table td { padding: 0.8rem 1rem; border-bottom: 1px solid #eee; }
-        .spec-label { font-weight: 700; color: var(--secondary); width: 45%; }
+        
         .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .drawing-sec { width: 100%; margin-top: 4rem; border-top: 1px solid #eee; padding-top: 2rem; }
         .drawing-sec img { max-width: 800px; display: block; margin: 0 auto; }
@@ -139,7 +148,16 @@
 
         @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 768px) { .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr; } }
-   .prod-desc { text-align: justify; }
+   
+  
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; }
+        .prod-media { flex: 1; min-width: 400px; }
+        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .prod-info { flex: 1.2; min-width: 400px; }
+        .prod-desc { margin-bottom: 3rem; font-size: 1.1rem; color: #444; text-align: justify; }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+        .specs-table td { padding: 1.2rem 1rem; border-bottom: 1px solid #eee; }
+        .spec-label { font-weight: 700; color: var(--secondary); width: 45%; background: #fcfcfc; }
   </style>
  </head>
  <body>
@@ -193,160 +211,6 @@
    </h1>
   </header>
   <main class="container">
-   <main class="container">
-    <div class="prod-media">
-     <img src="/rh-ladder-site/media/2020/11/product-lg-rh47-aerila-ladder-rhladder.jpg"/>
-     <h3>
-      Technical Specifications
-     </h3>
-     <table class="specs-table">
-      <tr>
-       <td class="spec-label">
-        Working height (A)
-       </td>
-       <td>
-        14.33m (47')
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Horizontal reach (B)
-       </td>
-       <td>
-        11.07m (36'4")
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Retracted length (C)
-       </td>
-       <td>
-        4.98m (16'4")
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Interior width (D)
-       </td>
-       <td>
-        49 cm (19")
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Bucket capacity
-       </td>
-       <td>
-        159 kg (350 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Lifting ring
-       </td>
-       <td>
-        250 kg (550 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Rotation
-       </td>
-       <td>
-        360° continue
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Elevation
-       </td>
-       <td>
-        -5° à 85°
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Approx. weight
-       </td>
-       <td>
-        612 kg (1350 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Min. GVWR
-       </td>
-       <td>
-        8620 kg (17500 lbs)
-       </td>
-      </tr>
-      <tr>
-       <td class="spec-label">
-        Hydraulic pressure
-       </td>
-       <td>
-        20684 kPa (3000 psi)
-       </td>
-      </tr>
-     </table>
-    </div>
-    <div class="prod-info">
-     <div class="prod-desc">
-      <p>
-       <span>
-        The RH47 is a non-insulated telescoping ladder with a working height of 47 ft. (14.33 m), comprising three ladder sections for extra efficiency and a great side reach of 36 ft. (11.07 m). This unit has the asset of being a 3 section ladder including a lifting ring, as does most of our equipment. Ideal for work requiring a longer reach (e.g., utility poles offset far from the road)
-       </span>
-       <br/>
-       <span>
-        This unit can be installed on different chassis as long as the GVWR (gross vehicle weight rating) is greater than 17,500 lbs (7,938 kg) like Ford F550 or E550, International, Freightliner and so many more.
-       </span>
-      </p>
-      <p>
-       <span>
-        The use of STRENX steel comes in handy; you get the ruggedness and quality RH Aerial Lift Equipment is known for, and greater pay load normally associated with bigger rigs.  Feel free to contact us for more information.
-       </span>
-      </p>
-      <p>
-       <span>
-        The connection of the auxiliary battery isolates the vehicle’s aerial lift equipment. The unit will work without the vehicle engine on. In any case, it will affect the vehicle’s battery; it is actually an additional security because if the truck’s battery needs a little “boost”, due to the type of connection, it can feed of the auxiliary battery. All our units have a two-way splitter between the auxiliary battery and the vehicle. We make no modification to your vehicle, only a wire is connected to the alternator which is used to recharge the auxiliary battery when the vehicle is running.
-       </span>
-      </p>
-      <p>
-       <span>
-        In addition, we can provide additional security by adding a system such as Ozone-tech. This product requires removing the keys from the ignition; press an activator button to operate the unit. Ozone-tech is perfect for fleet owners that want to have some control over the fuel consumption. The system ensures optimum battery management and will turn on the engine if the vehicle needs to recharge the battery to its maximum capacity.
-       </span>
-      </p>
-      <p>
-       <span>
-        Accuracy is crucial to achieve consistent quality. RH Ladder uses water jet and laser cutting, along with robotic welding, to deliver constant precision and reliability.
-       </span>
-      </p>
-     </div>
-    </div>
-    <div style="background: #fff9eb; border-left: 5px solid #fda40a; padding: 1.5rem; margin-top: 4rem; width: 100%; clear: both; font-size: 0.95rem; color: #444; border-radius: 4px;">
-     <h4 style="margin-top: 0; color: #1a1a1a; text-transform: uppercase; font-weight: 800; font-size: 0.9rem;">
-      Important Note
-     </h4>
-     <p>
-      This type of aerial ladder must be installed on vehicles whose GVWR (gross vehicle weight rating) is greater than 9,500 lbs (4,309 kg). Outriggers are generally not required. However, given the variety of configurations possible, outrigger requirements must be confirmed by means of stability tests performed on your bucket truck.
-     </p>
-     <p>
-      The same applies to the bucket’s load-carrying capacity (in other words, the maximum weight authorized to be carried in the bucket). Specifically, this telescoping ladder is rated to carry 350 lbs (159 kg); however, its actual load-carrying capacity depends on the carrier vehicle.
-     </p>
-     <p>
-      We encourage you to contact Robert Hydraulique to obtain more information on the restrictions and factors to be taken into account when installing RH telescoping aerial ladders so that you can meet the highest standards in quality and safety.
-     </p>
-     <p style="font-weight: 700; margin-bottom: 0;">
-      *** Always ensure that you are complying with all local regulations when installing bucket-equipped aerial ladders. Robert Hydraulique is not responsible for installations performed outside its production facilities.
-     </p>
-    </div>
-    <div class="drawing-sec">
-     <h3>
-      Dessin Technique &amp; Dimensions
-     </h3>
-     <img src="/rh-ladder-site/media/2020/11/framespec.png"/>
-    </div>
-   </main>
   </main>
   <footer>
    <div class="footer-grid">
