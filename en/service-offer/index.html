@@ -47,10 +47,36 @@
         .copyright { border-top: 1px solid #222; padding-top: 2rem; text-align: center; font-size: 0.8rem; color: #555; margin-top: 4rem; }
         @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
+   nav {
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.2rem 5%; background: #121212;
+            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .logo img { height: 40px; }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
+        .nav-links a { 
+            text-decoration: none; color: #ffffff; font-weight: 600; font-size: 0.8rem; 
+            text-transform: uppercase; letter-spacing: 1.5px; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+            background: #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        .elite-pill {
+            background: #121212; color: #ffffff !important;
+            padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800 !important;
+            border: 2px solid #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none; text-transform: uppercase; font-size: 0.8rem;
+        }
+        .elite-pill:hover { background: #fda40a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
   </style>
  </head>
  <body>
-  <nav style="position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--secondary); color: white; border-bottom: 1px solid rgba(255,255,255,0.1);">
+  <nav style="position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: #121212; border-bottom: 1px solid rgba(255,255,255,0.1);">
    <div class="logo">
     <a href="/rh-ladder-site/en/">
      <img src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png"/>
