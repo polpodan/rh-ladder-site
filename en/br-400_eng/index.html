@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   {title} | RH Equipment
-  </title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&amp;display=swap" rel="stylesheet"/>
-  <style>
-   :root { --primary: #fda40a; --secondary: #121212; --text: #1a1a1a; --light: #f8f9fa; --white: #ffffff; }
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerial ladder boom telescoping device for Prinoth or Bombardier BR | RH Equipment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #fda40a; --secondary: #121212; --text: #1a1a1a; --light: #f8f9fa; --white: #ffffff; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }
-        nav { position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--secondary); color: white; border-bottom: 1px solid rgba(255,255,255,0.1); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        nav { position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: #121212; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .logo img { height: 40px; border: none; }
         .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; margin: 0; padding: 0; }
         .nav-links a { text-decoration: none; color: #ffffff; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; position: relative; }
-        .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--primary); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .nav-links a:hover::after { width: 100%; }
         .elite-pill { background: #121212; color: #ffffff !important; padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
         .elite-pill:hover { background: #fda40a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
-        
         .hero-prod { padding: 4rem 5%; background: #f4f4f4; text-align: center; border-bottom: 4px solid var(--primary); }
         .hero-prod h1 { font-size: 2.5rem; font-weight: 900; text-transform: uppercase; }
-
         .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; display: flex; gap: 4rem; flex-wrap: wrap; }
         .prod-media { flex: 1; min-width: 400px; }
         .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .prod-info { flex: 1.2; min-width: 400px; text-align: justify; }
-        
         .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
         .specs-table td { padding: 1.2rem 1rem; border-bottom: 1px solid #eee; }
         .spec-label { font-weight: 700; color: var(--secondary); width: 45%; background: #fcfcfc; }
-        
         .drawing-sec { width: 100%; margin-top: 4rem; border-top: 1px solid #eee; padding-top: 2rem; text-align: center; clear: both; }
         .drawing-sec img { max-width: 800px; width: 100%; display: block; margin: 0 auto; }
-
+        footer { background: #0a0a0a; color: white; padding: 5rem 5% 2rem; margin-top: 5rem; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; text-align: left; }
         .footer-col h5 { color: #fda40a; font-weight: 800; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; }
         .footer-col ul { list-style: none; padding: 0; }
@@ -42,215 +35,119 @@
         .footer-col a { color: #888; text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
         .footer-col a:hover { color: #fff; }
         .copyright { border-top: 1px solid #222; padding-top: 2rem; text-align: center; font-size: 0.8rem; color: #555; margin-top: 4rem; }
-        footer { background: #0a0a0a; color: white; padding: 5rem 5% 2rem; margin-top: 5rem; }
-
         @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 768px) { .container { flex-direction: column; } .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr; } }
-  </style>
- </head>
- <body>
-  <nav>
-   <div class="logo">
-    <a href="/rh-ladder-site/en/">
-     <img alt="RH Equipment" src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png"/>
-    </a>
-   </div>
-   <ul class="nav-links">
-    <li>
-     <a href="/rh-ladder-site/en/">
-      Home
-     </a>
-    </li>
-    <li>
-     <a href="/rh-ladder-site/en/#produits">
-      Products
-     </a>
-    </li>
-    <li>
-     <a href="/rh-ladder-site/en/gallery/">
-      Gallery
-     </a>
-    </li>
-    <li>
-     <a href="https://starh.ca/" target="_blank">
-      Services
-     </a>
-    </li>
-    <li>
-     <a href="/rh-ladder-site/en/contact/">
-      Contact
-     </a>
-    </li>
-    <li>
-     <a href="/rh-ladder-site/fr/" style="color:#888;">
-      [FR]
-     </a>
-    </li>
-    <li>
-     <a class="elite-pill" href="https://rhed.ca/en/" target="_blank">
-      Elite
-     </a>
-    </li>
-   </ul>
-  </nav>
-  <header class="hero-prod">
-   <h1>
-    {title}
-   </h1>
-  </header>
-  <main class="container">
-   <div class="prod-media">
-    <img alt="{title}" src="{img}"/>
-    <h3 style="margin-top:2.5rem; text-transform:uppercase; font-weight:800;">
-     Technical Specifications
-    </h3>
-    <table class="specs-table">
-     {specs}
-    </table>
-   </div>
-   <div class="prod-info">
-    <div class="prod-desc">
-     <p>
-      <span>
-       The BR is actually the name of the vehicle we install our units on. We can install our entire line of products. From the RH35 to the RH50D sky is the limit. With its working height of 50 ft. (15, 25 m) and its side reach of 39 ft. (11,90 m) it is commonly used for ski patrol assistance, chairlifts and snowmaker maintenance, light post maintenance, pruning and so many more.
-       <br/>
-       Our tiltable base allows you to level your aerial lift as if your hillside grooming machine were on a horizontal surface. You can thus work on a 45˚ slope. Equipped with 2 stabilizers, the unit guarantees a safe working environment.
-       <br/>
-       The lifting ring is located at the end of the second section; it is a standard accessory and can lift loads of 550 lbs (250 kg) in any position, regardless of carrier vehicle. And that’s not to mention the many other benefits and options available to ensure that RH aerial lift equipment meets your peculiar needs. Feel free to contact us for more information.
-      </span>
-     </p>
-     <p>
-      <span>
-       • Faster completion of aerial work
-       <br/>
-       • Faster access to slope lighting devices
-       <br/>
-       • Faster access to lift machinery
-       <br/>
-       • Faster access to snow making equipment
-       <br/>
-       • Improved tree-trimming capability
-      </span>
-     </p>
-     <p>
-      <span>
-       • Ski patrol assistance capability
-       <br/>
-       • Working height up to 50 ft
-       <br/>
-       • Insulated and non-insulated models
-       <br/>
-       • Compliance with CSA, ANSI, and   OSHA    standards
-      </span>
-     </p>
-     <p>
-      <span>
-       In addition, we can provide additional security by adding a system such as Ozone-tech. This product requires removing the keys from the ignition; press an activator button to operate the unit. Ozone-tech is perfect for fleet owners that want to have some control over the fuel consumption. The system ensures optimum battery management and will turn on the engine if the vehicle needs to recharge the battery to its maximum capacity.
-      </span>
-     </p>
-     <p>
-      <span>
-       RH equipment offer a larger size aluminum bucket for more versatility and resistance. Most common use are in signs in business and construction. Could suit multiple other work needs.
-      </span>
-     </p>
-     <p>
-      <span>
-       Accuracy is crucial to achieve consistent quality. RH Ladder uses water jet and laser cutting, along with robotic welding, to deliver constant precision and reliability.
-      </span>
-     </p>
-    </div>
-   </div>
-   <div style="background: #fff9eb; border-left: 5px solid #fda40a; padding: 1.5rem; margin-top: 4rem; width: 100%; clear: both; font-size: 0.95rem; color: #444; border-radius: 4px; text-align:left;">
-    <h4 style="margin-top: 0; color: #1a1a1a; text-transform: uppercase; font-weight: 800; font-size: 0.9rem;">
-     Important Note
-    </h4>
-    <p>
-     This type of aerial ladder must be installed on vehicles whose GVWR (gross vehicle weight rating) is greater than 9,500 lbs (4,309 kg). Outriggers are generally not required. However, given the variety of configurations possible, outrigger requirements must be confirmed by means of stability tests performed on your bucket truck.
-    </p>
-    <p>
-     The same applies to the bucket’s load-carrying capacity (in other words, the maximum weight authorized to be carried in the bucket). Specifically, this telescoping ladder is rated to carry 350 lbs (159 kg); however, its actual load-carrying capacity depends on the carrier vehicle.
-    </p>
-    <p>
-     We encourage you to contact Robert Hydraulique to obtain more information on the restrictions and factors to be taken into account when installing RH telescoping aerial ladders so that you can meet the highest standards in quality and safety.
-    </p>
-    <p style="font-weight: 700; margin-bottom: 0;">
-     *** Always ensure that you are complying with all local regulations when installing bucket-equipped aerial ladders. Robert Hydraulique is not responsible for installations performed outside its production facilities.
-    </p>
-   </div>
-   <div class="drawing-sec">
-    <h3>
-     Technical Drawing &amp; Dimensions
-    </h3>
-    <img src="/rh-ladder-site/media/2020/11/framespec.png"/>
-   </div>
-  </main>
-  <footer>
-   <div class="footer-grid">
-    <div class="footer-col">
-     <img src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 40px; margin-bottom: 2rem;"/>
-     <p style="color: #666; font-size: 0.9rem;">
-      Global manufacturer of high-precision aerial ladders and lifting devices for over 30 years.
-     </p>
-    </div>
-    <div class="footer-col">
-     <h5>
-      Products
-     </h5>
-     <ul>
-      <li>
-       <a href="/rh-ladder-site/en/catalogue-insulated/">
-        Insulated Ladders
-       </a>
-      </li>
-      <li>
-       <a href="/rh-ladder-site/en/catalogue-non-insulated/">
-        Non-Insulated
-       </a>
-      </li>
-      <li>
-       <a href="/rh-ladder-site/en/catalogue-specialized/">
-        Specialized Units
-       </a>
-      </li>
-      <li>
-       <a href="/rh-ladder-site/en/options/">
-        Options &amp; Accessories
-       </a>
-      </li>
-     </ul>
-    </div>
-    <div class="footer-col">
-     <h5>
-      Company
-     </h5>
-     <ul>
-      <li>
-       <a href="/rh-ladder-site/en/about/">
-        About Us
-       </a>
-      </li>
-      <li>
-       <a href="https://starh.ca/" target="_blank">
-        STARH INC.
-       </a>
-      </li>
-     </ul>
-    </div>
-    <div class="footer-col">
-     <h5>
-      Contact
-     </h5>
-     <p style="color: #888; font-size: 0.9rem;">
-      89 Industrial Park St, Lanoraie, QC, J0K 1E0
-     </p>
-     <p style="color: #fda40a; font-weight: 800; margin-top: 1rem;">
-      450-582-8701
-     </p>
-    </div>
-   </div>
-   <div class="copyright">
-    © 2026 RH Equipment. All rights reserved.
-   </div>
-  </footer>
- </body>
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="/rh-ladder-site/en/"><img src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png" alt="RH Equipment"></a></div>
+        <ul class="nav-links">
+            <li><a href="/rh-ladder-site/en/">Home</a></li>
+            <li><a href="/rh-ladder-site/en/#produits">Products</a></li>
+            <li><a href="/rh-ladder-site/en/gallery/">Gallery</a></li>
+            <li><a href="https://starh.ca/" target="_blank">Services</a></li>
+            <li><a href="/rh-ladder-site/fr/" style="color:#888;">[FR]</a></li>
+            <li><a href="https://rhed.ca/en/" target="_blank" class="elite-pill">Elite</a></li>
+        </ul>
+    </nav>
+    <header class="hero-prod"><h1>Aerial ladder boom telescoping device for Prinoth or Bombardier BR</h1></header>
+    <main class="container">
+        <div class="prod-media">
+            <img src="/rh-ladder-site/media/2020/11/product-lg-br-400-grooming.jpg" alt="Aerial ladder boom telescoping device for Prinoth or Bombardier BR">
+            <h3 style="margin-top:2.5rem; text-transform:uppercase; font-weight:800;">Technical Specifications</h3>
+            <table class="specs-table"><tr><td class='spec-label'>Est. working height  (A)</td><td>15.24m (50')</td></tr><tr><td class='spec-label'>Horizontal reach      (B)</td><td>11.88m (39’)</td></tr><tr><td class='spec-label'>Length (retracted)   (C)</td><td>5.78m (19')</td></tr><tr><td class='spec-label'>Interior width           (D)</td><td>49 cm (19")</td></tr><tr><td class='spec-label'>Bucket capacity</td><td>159 kg (350 lbs)</td></tr><tr><td class='spec-label'>Lifting ring</td><td>250 kg (550 lbs)</td></tr><tr><td class='spec-label'>Rotation</td><td>360° continue (opt.)</td></tr><tr><td class='spec-label'>Elevation degrees</td><td>-5° to 80°</td></tr><tr><td class='spec-label'>Approx. weight</td><td>658 kg (1450 lbs)</td></tr><tr><td class='spec-label'>Overall height</td><td>82’’ (2.08 m)</td></tr><tr><td class='spec-label'>GVWR min. required</td><td>N/A</td></tr><tr><td class='spec-label'>Hydraulic pressure</td><td>20684 kPa (3000 psi)</td></tr></table>
+        </div>
+        <div class="prod-info">
+            <div class="prod-desc"><p>
+ <span>
+  The BR is actually the name of the vehicle we install our units on. We can install our entire line of products. From the RH35 to the RH50D sky is the limit. With its working height of 50 ft. (15, 25 m) and its side reach of 39 ft. (11,90 m) it is commonly used for ski patrol assistance, chairlifts and snowmaker maintenance, light post maintenance, pruning and so many more.
+  <br/>
+  Our tiltable base allows you to level your aerial lift as if your hillside grooming machine were on a horizontal surface. You can thus work on a 45˚ slope. Equipped with 2 stabilizers, the unit guarantees a safe working environment.
+  <br/>
+  The lifting ring is located at the end of the second section; it is a standard accessory and can lift loads of 550 lbs (250 kg) in any position, regardless of carrier vehicle. And that’s not to mention the many other benefits and options available to ensure that RH aerial lift equipment meets your peculiar needs. Feel free to contact us for more information.
+ </span>
+</p>
+<p>
+ <span>
+  • Faster completion of aerial work
+  <br/>
+  • Faster access to slope lighting devices
+  <br/>
+  • Faster access to lift machinery
+  <br/>
+  • Faster access to snow making equipment
+  <br/>
+  • Improved tree-trimming capability
+ </span>
+</p>
+<p>
+ <span>
+  • Ski patrol assistance capability
+  <br/>
+  • Working height up to 50 ft
+  <br/>
+  • Insulated and non-insulated models
+  <br/>
+  • Compliance with CSA, ANSI, and   OSHA    standards
+ </span>
+</p>
+<p>
+ <span>
+  The connection of the auxiliary battery isolates the vehicle’s aerial lift equipment. The unit will work without the vehicle engine on. In any case, it will affect the vehicle’s battery; it is actually an additional security because if the truck’s battery needs a little “boost”, due to the type of connection, it can feed of the auxiliary battery. All our units have a two-way splitter between the auxiliary battery and the vehicle. We make no modification to your vehicle, only a wire is connected to the alternator which is used to recharge the auxiliary battery when the vehicle is running.
+ </span>
+</p>
+<p>
+ <span>
+  In addition, we can provide additional security by adding a system such as Ozone-tech. This product requires removing the keys from the ignition; press an activator button to operate the unit. Ozone-tech is perfect for fleet owners that want to have some control over the fuel consumption. The system ensures optimum battery management and will turn on the engine if the vehicle needs to recharge the battery to its maximum capacity.
+ </span>
+</p>
+<p>
+ <span>
+  RH equipment offer a larger size aluminum bucket for more versatility and resistance. Most common use are in signs in business and construction. Could suit multiple other work needs.
+ </span>
+</p>
+<p>
+ <span>
+  Accuracy is crucial to achieve consistent quality. RH Ladder uses water jet and laser cutting, along with robotic welding, to deliver constant precision and reliability.
+ </span>
+</p>
+</div>
+        </div>
+        <div style="background: #fff9eb; border-left: 5px solid #fda40a; padding: 1.5rem; margin-top: 4rem; width: 100%; clear: both; font-size: 0.95rem; color: #444; border-radius: 4px; text-align:left;">
+            <h4 style="margin-top: 0; color: #1a1a1a; text-transform: uppercase; font-weight: 800; font-size: 0.9rem;">Important Note</h4>
+            <p>This type of aerial ladder must be installed on vehicles whose GVWR (gross vehicle weight rating) is greater than 9,500 lbs (4,309 kg). Outriggers are generally not required. However, given the variety of configurations possible, outrigger requirements must be confirmed by means of stability tests performed on your bucket truck.</p>
+            <p>The same applies to the bucket’s load-carrying capacity (in other words, the maximum weight authorized to be carried in the bucket). Specifically, this telescoping ladder is rated to carry 350 lbs (159 kg); however, its actual load-carrying capacity depends on the carrier vehicle.</p>
+            <p>We encourage you to contact Robert Hydraulique to obtain more information on the restrictions and factors to be taken into account when installing RH telescoping aerial ladders so that you can meet the highest standards in quality and safety.</p>
+            <p style="font-weight: 700; margin-bottom: 0;">*** Always ensure that you are complying with all local regulations when installing bucket-equipped aerial ladders. Robert Hydraulique is not responsible for installations performed outside its production facilities.</p>
+        </div>
+        <div class="drawing-sec">
+            <h3>Technical Drawing & Dimensions</h3>
+            <img src="/rh-ladder-site/media/2020/11/framespec.png">
+        </div>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png" alt="RH Logo" style="height: 40px; margin-bottom: 2rem;">
+                <p style="color: #666; font-size: 0.9rem;">Global manufacturer of high-precision aerial ladders and lifting devices for over 30 years.</p>
+            </div>
+            <div class="footer-col"><h5>Products</h5><ul>
+                <li><a href="/rh-ladder-site/en/catalogue-insulated/">Insulated Ladders</a></li>
+                <li><a href="/rh-ladder-site/en/catalogue-non-insulated/">Non-Insulated</a></li>
+                <li><a href="/rh-ladder-site/en/catalogue-specialized/">Specialized Units</a></li>
+                <li><a href="/rh-ladder-site/en/options/">Options & Accessories</a></li>
+            </ul></div>
+            <div class="footer-col"><h5>Company</h5><ul>
+                <li><a href="/rh-ladder-site/en/about/">About Us</a></li>
+                <li><a href="https://starh.ca/" target="_blank">STARH INC.</a></li>
+            </ul></div>
+            <div class="footer-col"><h5>Contact</h5>
+                <p style="color: #888; font-size: 0.9rem;">89 Industrial Park St, Lanoraie, QC, J0K 1E0</p>
+                <p style="color: #fda40a; font-weight: 800; margin-top: 1rem;">450-582-8701</p>
+            </div>
+        </div>
+        <div class="copyright">© 2026 RH Equipment. All rights reserved.</div>
+    </footer>
+</body>
 </html>
