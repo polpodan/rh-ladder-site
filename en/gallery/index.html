@@ -4,40 +4,29 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Gallery | RH Equipment
+   Media &amp; Action | RH Equipment
   </title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
   <style>
-   :root { --primary: #fda40a; --secondary: #121212; --text: #1a1a1a; --white: #ffffff; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }
-        nav { position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--secondary); color: white; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .logo img { height: 40px; }
-        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+   :root { --primary: #fda40a; --secondary: #121212; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: #fff; color: #1a1a1a; }
+        nav { background: var(--secondary); padding: 1.2rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index:1000; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; margin: 0; padding: 0; }
         .nav-links a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
-        .nav-links a:hover { color: var(--primary); }
         .elite-pill { background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }
-        .hero-sub { padding: 6rem 5%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/rh-ladder-site/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg'); background-size: cover; background-position: center; color: white; text-align: center; border-bottom: 4px solid var(--primary); }
-        .hero-sub h1 { font-size: 3rem; font-weight: 900; text-transform: uppercase; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
-        footer { background: #0a0a0a; color: white; padding: 4rem 5% 2rem; text-align: center; margin-top: 5rem; }
         
-        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
-        .specs-table td { padding: 0.8rem 1rem; border-bottom: 1px solid #eee; }
-        .spec-label { font-weight: 700; color: var(--secondary); width: 45%; }
-        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .drawing-sec { width: 100%; margin-top: 4rem; border-top: 1px solid #eee; padding-top: 2rem; }
-        .drawing-sec img { max-width: 800px; display: block; margin: 0 auto; }
+        .hero-sub { padding: 4rem 5%; background: #f4f4f4; text-align: center; border-bottom: 4px solid var(--primary); }
+        h2 { text-align: center; text-transform: uppercase; font-weight: 900; margin: 4rem 0 2rem; font-size: 2rem; }
+        
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; padding: 0 5%; }
+        .gallery-item { height: 250px; overflow: hidden; border-radius: 8px; transition: 0.3s; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 2rem; padding: 0 5%; }
+        .video-item { aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; background: #000; }
+        .video-item iframe { width: 100%; height: 100%; border: none; }
 
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
-        .product-card { text-decoration: none; color: inherit; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-5px); }
-        .product-img { height: 250px; background: #eee; border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; }
-        .product-img img { width: 100%; height: 100%; object-fit: cover; }
-        .product-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; border-left: 4px solid var(--primary); padding-left: 1rem; }
-        .product-card p { font-size: 0.95rem; color: #666; }
-
-        @media (max-width: 768px) { .nav-links { display: none; } }
+        footer { background: var(--secondary); color: white; padding: 3rem; text-align: center; margin-top: 5rem; }
    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; text-align: left; }
         .footer-col h5 { color: var(--primary); font-weight: 800; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; }
         .footer-col ul { list-style: none; padding: 0; }
@@ -130,6 +119,11 @@
      </a>
     </li>
     <li>
+     <a href="/rh-ladder-site/en/contact/">
+      Contact
+     </a>
+    </li>
+    <li>
      <a href="/rh-ladder-site/fr/" style="color:#888;">
       [FR]
      </a>
@@ -143,200 +137,283 @@
   </nav>
   <header class="hero-sub">
    <h1>
-    Gallery
+    Media &amp; Action
    </h1>
   </header>
-  <main class="container">
-   <div class="gallery-grid">
-    <div class="gallery-item">
-     <img alt="RH Action 1" src="/rh-ladder-site/media/2020/11/gallery-1.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 2" src="/rh-ladder-site/media/2020/11/gallery-2.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 3" src="/rh-ladder-site/media/2020/11/gallery-3.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 4" src="/rh-ladder-site/media/2020/11/gallery-4.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 5" src="/rh-ladder-site/media/2020/11/gallery-5.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 6" src="/rh-ladder-site/media/2020/11/gallery-6.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 7" src="/rh-ladder-site/media/2020/11/gallery-7.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 8" src="/rh-ladder-site/media/2020/11/gallery-8.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 9" src="/rh-ladder-site/media/2020/11/gallery-9.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 10" src="/rh-ladder-site/media/2020/11/gallery-10.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 11" src="/rh-ladder-site/media/2020/11/gallery-11.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 12" src="/rh-ladder-site/media/2020/11/gallery-12.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 13" src="/rh-ladder-site/media/2020/11/gallery-13.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 14" src="/rh-ladder-site/media/2020/11/gallery-14.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 15" src="/rh-ladder-site/media/2020/11/gallery-15.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 16" src="/rh-ladder-site/media/2020/11/gallery-16.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 17" src="/rh-ladder-site/media/2020/11/gallery-17.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 18" src="/rh-ladder-site/media/2020/11/gallery-18.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 19" src="/rh-ladder-site/media/2020/11/gallery-19.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 20" src="/rh-ladder-site/media/2020/11/gallery-20.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 21" src="/rh-ladder-site/media/2020/11/gallery-21.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 22" src="/rh-ladder-site/media/2020/11/gallery-22.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 23" src="/rh-ladder-site/media/2020/11/gallery-23.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 24" src="/rh-ladder-site/media/2020/11/gallery-24.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 25" src="/rh-ladder-site/media/2020/11/gallery-25.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 26" src="/rh-ladder-site/media/2020/11/gallery-26.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 27" src="/rh-ladder-site/media/2020/11/gallery-27.png"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 28" src="/rh-ladder-site/media/2020/11/gallery-28.png"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 29" src="/rh-ladder-site/media/2020/11/gallery-29.png"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 30" src="/rh-ladder-site/media/2020/11/gallery-30.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 31" src="/rh-ladder-site/media/2020/11/gallery-31.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 32" src="/rh-ladder-site/media/2020/11/gallery-32.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 33" src="/rh-ladder-site/media/2020/11/gallery-33.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 34" src="/rh-ladder-site/media/2020/11/gallery-34.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 35" src="/rh-ladder-site/media/2020/11/gallery-35.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 36" src="/rh-ladder-site/media/2020/11/gallery-36.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 37" src="/rh-ladder-site/media/2020/11/gallery-37.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 38" src="/rh-ladder-site/media/2020/11/gallery-38.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 39" src="/rh-ladder-site/media/2020/11/gallery-39.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 40" src="/rh-ladder-site/media/2020/11/gallery-40.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 41" src="/rh-ladder-site/media/2020/11/gallery-41.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 42" src="/rh-ladder-site/media/2020/11/gallery-42.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 43" src="/rh-ladder-site/media/2020/11/gallery-43.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 44" src="/rh-ladder-site/media/2020/11/gallery-44.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 45" src="/rh-ladder-site/media/2020/11/gallery-45.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 46" src="/rh-ladder-site/media/2020/11/gallery-46.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 47" src="/rh-ladder-site/media/2020/11/gallery-47.jpg"/>
-    </div>
-    <div class="gallery-item">
-     <img alt="RH Action 48" src="/rh-ladder-site/media/2020/11/gallery-48.jpg"/>
-    </div>
+  <h2>
+   Photo Gallery
+  </h2>
+  <div class="gallery-grid">
+   <div class="gallery-item">
+    <img alt="RH Action 1" src="/rh-ladder-site/media/2020/11/gallery-1.jpg"/>
    </div>
-  </main>
+   <div class="gallery-item">
+    <img alt="RH Action 2" src="/rh-ladder-site/media/2020/11/gallery-2.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 3" src="/rh-ladder-site/media/2020/11/gallery-3.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 4" src="/rh-ladder-site/media/2020/11/gallery-4.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 5" src="/rh-ladder-site/media/2020/11/gallery-5.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 6" src="/rh-ladder-site/media/2020/11/gallery-6.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 7" src="/rh-ladder-site/media/2020/11/gallery-7.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 8" src="/rh-ladder-site/media/2020/11/gallery-8.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 9" src="/rh-ladder-site/media/2020/11/gallery-9.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 10" src="/rh-ladder-site/media/2020/11/gallery-10.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 11" src="/rh-ladder-site/media/2020/11/gallery-11.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 12" src="/rh-ladder-site/media/2020/11/gallery-12.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 13" src="/rh-ladder-site/media/2020/11/gallery-13.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 14" src="/rh-ladder-site/media/2020/11/gallery-14.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 15" src="/rh-ladder-site/media/2020/11/gallery-15.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 16" src="/rh-ladder-site/media/2020/11/gallery-16.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 17" src="/rh-ladder-site/media/2020/11/gallery-17.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 18" src="/rh-ladder-site/media/2020/11/gallery-18.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 19" src="/rh-ladder-site/media/2020/11/gallery-19.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 20" src="/rh-ladder-site/media/2020/11/gallery-20.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 21" src="/rh-ladder-site/media/2020/11/gallery-21.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 22" src="/rh-ladder-site/media/2020/11/gallery-22.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 23" src="/rh-ladder-site/media/2020/11/gallery-23.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 24" src="/rh-ladder-site/media/2020/11/gallery-24.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 25" src="/rh-ladder-site/media/2020/11/gallery-25.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 26" src="/rh-ladder-site/media/2020/11/gallery-26.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 27" src="/rh-ladder-site/media/2020/11/gallery-27.png"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 28" src="/rh-ladder-site/media/2020/11/gallery-28.png"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 29" src="/rh-ladder-site/media/2020/11/gallery-29.png"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 30" src="/rh-ladder-site/media/2020/11/gallery-30.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 31" src="/rh-ladder-site/media/2020/11/gallery-31.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 32" src="/rh-ladder-site/media/2020/11/gallery-32.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 33" src="/rh-ladder-site/media/2020/11/gallery-33.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 34" src="/rh-ladder-site/media/2020/11/gallery-34.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 35" src="/rh-ladder-site/media/2020/11/gallery-35.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 36" src="/rh-ladder-site/media/2020/11/gallery-36.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 37" src="/rh-ladder-site/media/2020/11/gallery-37.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 38" src="/rh-ladder-site/media/2020/11/gallery-38.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 39" src="/rh-ladder-site/media/2020/11/gallery-39.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 40" src="/rh-ladder-site/media/2020/11/gallery-40.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 41" src="/rh-ladder-site/media/2020/11/gallery-41.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 42" src="/rh-ladder-site/media/2020/11/gallery-42.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 43" src="/rh-ladder-site/media/2020/11/gallery-43.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 44" src="/rh-ladder-site/media/2020/11/gallery-44.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 45" src="/rh-ladder-site/media/2020/11/gallery-45.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 46" src="/rh-ladder-site/media/2020/11/gallery-46.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 47" src="/rh-ladder-site/media/2020/11/gallery-47.jpg"/>
+   </div>
+   <div class="gallery-item">
+    <img alt="RH Action 48" src="/rh-ladder-site/media/2020/11/gallery-48.jpg"/>
+   </div>
+  </div>
+  <h2>
+   Videos in Action
+  </h2>
+  <div class="video-grid">
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/gRjQKvDJP9s">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/gsFOF95SfEc">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/hUfnBXBREQw">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/8IVY_1LHsDg">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/papYdOGnrKY">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/BmziQqiR2_g">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/YvHGXxtFEHc">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/jvvLfnombNc">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/QfmUQqvDkEI">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/jzS42sbHOmI">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/oNyJy5IsMTE">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/MgHyLV39tSI">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/VsrQYi1e3mQ">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/fxC5OvWEOMk">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/tB8VIPqVydA">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/jREqvh_ouo0">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/4gWVCwe-ap0">
+    </iframe>
+   </div>
+   <div class="video-item">
+    <iframe allowfullscreen="" src="https://www.youtube.com/embed/M0c5j2j8BO4">
+    </iframe>
+   </div>
+  </div>
   <footer>
    <div class="footer-grid">
     <div class="footer-col">
-     <img alt="RH Logo" src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 40px; margin-bottom: 2rem;"/>
+     <img alt="RH Logo" src="/rh-ladder-site/media/2023/12/rh-logo-aerila-lift-fr-wht.png" style="height: 40px; margin-bottom: 2rem;"/>
      <p style="color: #666; font-size: 0.9rem;">
-      Global manufacturer of high-precision aerial ladders and lifting devices for over 30 years.
+      Manufacturier mondial d'échelles aériennes et d'engins élévateurs de haute précision depuis plus de 30 ans.
      </p>
     </div>
     <div class="footer-col">
      <h5>
-      Products
+      Produits
      </h5>
      <ul>
       <li>
-       <a href="/rh-ladder-site/en/catalogue-insulated/">
-        Insulated Ladders
+       <a href="/rh-ladder-site/en/catalogue-isole/">
+        Nacelles Isolées
        </a>
       </li>
       <li>
-       <a href="/rh-ladder-site/en/catalogue-non-insulated/">
-        Non-Insulated
+       <a href="/rh-ladder-site/en/catalogue-non-isole/">
+        Nacelles Non-Isolées
        </a>
       </li>
       <li>
-       <a href="/rh-ladder-site/en/catalogue-specialized/">
-        Specialized Units
+       <a href="/rh-ladder-site/en/catalogue-specialise/">
+        Unités Spécialisées
        </a>
       </li>
       <li>
-       <a href="/rh-ladder-site/en/options/">
-        Options &amp; Accessories
+       <a href="/rh-ladder-site/en/options-et-accessoires/">
+        Options &amp; Accessoires
        </a>
       </li>
      </ul>
     </div>
     <div class="footer-col">
      <h5>
-      Company
+      Entreprise
      </h5>
      <ul>
       <li>
-       <a href="/rh-ladder-site/en/about/">
-        About Us
+       <a href="/rh-ladder-site/en/a-propo-rh-nacelle-echelle/">
+        À Propos
+       </a>
+      </li>
+      <li>
+       <a href="/rh-ladder-site/en/carriere/">
+        Carrières
        </a>
       </li>
       <li>
@@ -351,7 +428,7 @@
       Contact
      </h5>
      <p style="color: #888; font-size: 0.9rem;">
-      89 Industrial Park St, Lanoraie, QC, J0K 1E0
+      89 rue du Parc industriel, Lanoraie, QC, J0K 1E0
      </p>
      <p style="color: #fda40a; font-weight: 800; margin-top: 1rem;">
       450-582-8701
@@ -359,7 +436,7 @@
     </div>
    </div>
    <div class="copyright">
-    © 2026 RH Equipment. All rights reserved.
+    © 2026 RH Equipment. Tous droits réservés.
    </div>
   </footer>
  </body>
