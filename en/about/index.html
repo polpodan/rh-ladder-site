@@ -70,13 +70,39 @@
             text-decoration: none; text-transform: uppercase; font-size: 0.8rem;
         }
         .elite-pill:hover { background: #fda40a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
+   nav {
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.2rem 5%; background: #121212;
+            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .logo img { height: 40px; border: none; }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; margin: 0; padding: 0; }
+        .nav-links a { 
+            text-decoration: none; color: #ffffff; font-weight: 600; font-size: 0.8rem; 
+            text-transform: uppercase; letter-spacing: 1.5px; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+            background: #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .elite-pill {
+            background: #121212; color: #ffffff !important;
+            padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800 !important;
+            border: 2px solid #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none; text-transform: uppercase; font-size: 0.8rem;
+        }
+        .elite-pill:hover { background: #fda40a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
+        @media (max-width: 768px) { .nav-links { display: none; } }
   </style>
  </head>
  <body>
   <nav>
    <div class="logo">
     <a href="/rh-ladder-site/en/">
-     <img src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png"/>
+     <img alt="RH Equipment" src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png"/>
     </a>
    </div>
    <ul class="nav-links">
@@ -101,8 +127,8 @@
      </a>
     </li>
     <li>
-     <a href="/rh-ladder-site/en/contact/">
-      Contact
+     <a href="/rh-ladder-site/fr/" style="color:#888;">
+      [FR]
      </a>
     </li>
     <li>
