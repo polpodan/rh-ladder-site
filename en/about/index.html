@@ -1,179 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   About Us | RH Equipment
-  </title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&amp;display=swap" rel="stylesheet"/>
-  <style>
-   :root { --primary: #fda40a; --secondary: #121212; --text: #1a1a1a; --white: #ffffff; }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RH Equipment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #fda40a; --secondary: #121212; --text: #1a1a1a; --white: #ffffff; --light-bg: #f9f9f9; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.7; background: var(--white); }
         nav { position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--secondary); color: white; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .logo img { height: 40px; }
         .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+        .nav-links a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
         .elite-pill { background: var(--secondary); color: white !important; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 800 !important; border: 2px solid var(--primary); }
-        .hero-sub { padding: 6rem 5%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/rh-ladder-site/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg'); background-size: cover; background-position: center; color: white; text-align: center; border-bottom: 4px solid var(--primary); }
-        .hero-sub h1 { font-size: 3rem; font-weight: 900; text-transform: uppercase; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
-        footer { background: #0a0a0a; color: white; padding: 4rem 5% 2rem; text-align: center; margin-top: 5rem; }
-        
-        .specs-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
-        .specs-table td { padding: 0.8rem 1rem; border-bottom: 1px solid #eee; }
-        .spec-label { font-weight: 700; color: var(--secondary); width: 45%; }
-        .prod-media img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .drawing-sec { width: 100%; margin-top: 4rem; border-top: 1px solid #eee; padding-top: 2rem; }
-        .drawing-sec img { max-width: 800px; display: block; margin: 0 auto; }
-
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
-        .product-card { text-decoration: none; color: inherit; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-5px); }
-        .product-img { height: 250px; background: #eee; border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; }
-        .product-img img { width: 100%; height: 100%; object-fit: cover; }
-        .product-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; border-left: 4px solid var(--primary); padding-left: 1rem; }
-        .product-card p { font-size: 0.95rem; color: #666; }
-
-        @media (max-width: 768px) { .nav-links { display: none; } }
-   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; text-align: left; }
+        .hero-about { padding: 8rem 5%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/rh-ladder-site/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg'); background-size: cover; background-position: center; color: white; text-align: center; border-bottom: 5px solid var(--primary); }
+        .hero-about h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+        .section { padding: 6rem 10%; }
+        .section-alt { background-color: var(--light-bg); }
+        .container-flex { display: flex; gap: 5rem; align-items: center; flex-wrap: wrap; }
+        .flex-text { flex: 1.2; min-width: 350px; }
+        .flex-img { flex: 1; min-width: 300px; }
+        .flex-img img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); border: 1px solid #eee; }
+        h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 2rem; color: var(--secondary); text-transform: uppercase; position: relative; display: inline-block; }
+        h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 5px; background: var(--primary); }
+        p { font-size: 1.15rem; margin-bottom: 1.5rem; color: #333; text-align: justify; }
+        .highlight { color: var(--primary); font-weight: 800; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-top: 4rem; }
+        .stat-item { text-align: center; }
+        .stat-number { display: block; font-size: 3rem; font-weight: 900; color: var(--primary); line-height: 1; }
+        .stat-label { font-size: 0.9rem; text-transform: uppercase; font-weight: 700; color: #666; letter-spacing: 1px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; text-align: left; }
         .footer-col h5 { color: var(--primary); font-weight: 800; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; }
         .footer-col ul { list-style: none; padding: 0; }
         .footer-col li { margin-bottom: 1rem; }
         .footer-col a { color: #888; text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
         .footer-col a:hover { color: #fff; }
         .copyright { border-top: 1px solid #222; padding-top: 2rem; text-align: center; font-size: 0.8rem; color: #555; margin-top: 4rem; }
-        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
-  </style>
- </head>
- <body>
-  <nav style="position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; background: var(--secondary); color: white; border-bottom: 1px solid rgba(255,255,255,0.1);">
-   <div class="logo">
-    <a href="/rh-ladder-site/en/">
-     <img src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png"/>
-    </a>
-   </div>
-   <ul class="nav-links">
-    <li>
-     <a href="/rh-ladder-site/en/">
-      Home
-     </a>
-    </li>
-    <li>
-     <a href="/rh-ladder-site/en/#produits">
-      Products
-     </a>
-    </li>
-    <li>
-     <a href="/rh-ladder-site/en/gallery/">
-      Gallery
-     </a>
-    </li>
-    <li>
-     <a href="https://starh.ca/" target="_blank">
-      Services
-     </a>
-    </li>
-    <li>
-     <a href="/rh-ladder-site/en/careers/">
-      Careers
-     </a>
-    </li>
-    <li>
-     <a href="/rh-ladder-site/en/contact/">
-      Contact
-     </a>
-    </li>
-    <li>
-     <a class="elite-pill" href="https://rhed.ca/en/" target="_blank">
-      Elite
-     </a>
-    </li>
-   </ul>
-  </nav>
-  <header class="hero-sub">
-   <h1>
-    About Us
-   </h1>
-  </header>
-  <main class="container">
-   None
-  </main>
-  <footer>
-   <div class="footer-grid">
-    <div class="footer-col">
-     <img alt="RH Logo" src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 40px; margin-bottom: 2rem;"/>
-     <p style="color: #666; font-size: 0.9rem;">
-      Global manufacturer of high-precision aerial ladders and lifting devices for over 30 years.
-     </p>
-    </div>
-    <div class="footer-col">
-     <h5>
-      Products
-     </h5>
-     <ul>
-      <li>
-       <a href="/rh-ladder-site/en/catalogue-insulated/">
-        Insulated Ladders
-       </a>
-      </li>
-      <li>
-       <a href="/rh-ladder-site/en/catalogue-non-insulated/">
-        Non-Insulated
-       </a>
-      </li>
-      <li>
-       <a href="/rh-ladder-site/en/catalogue-specialized/">
-        Specialized Units
-       </a>
-      </li>
-      <li>
-       <a href="/rh-ladder-site/en/options/">
-        Options &amp; Accessories
-       </a>
-      </li>
-     </ul>
-    </div>
-    <div class="footer-col">
-     <h5>
-      Company
-     </h5>
-     <ul>
-      <li>
-       <a href="/rh-ladder-site/en/about/">
-        About Us
-       </a>
-      </li>
-      <li>
-       <a href="/rh-ladder-site/en/careers/">
-        Careers
-       </a>
-      </li>
-      <li>
-       <a href="https://starh.ca/" target="_blank">
-        STARH INC.
-       </a>
-      </li>
-     </ul>
-    </div>
-    <div class="footer-col">
-     <h5>
-      Contact
-     </h5>
-     <p style="color: #888; font-size: 0.9rem;">
-      89 Industrial Park St, Lanoraie, QC, J0K 1E0
-     </p>
-     <p style="color: #fda40a; font-weight: 800; margin-top: 1rem;">
-      450-582-8701
-     </p>
-    </div>
-   </div>
-   <div class="copyright">
-    © 2026 RH Equipment. All rights reserved.
-   </div>
-  </footer>
- </body>
+        footer { background: #0a0a0a; color: white; padding: 4rem 5% 2rem; text-align: center; }
+        @media (max-width: 992px) { .section { padding: 4rem 5%; } .container-flex { gap: 3rem; } h2 { font-size: 1.8rem; } }
+        @media (max-width: 768px) { .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="/rh-ladder-site/en/"><img src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png"></a></div>
+        <ul class="nav-links">
+            <li><a href="/rh-ladder-site/en/">Home</a></li>
+            <li><a href="/rh-ladder-site/en/#produits">Products</a></li>
+            <li><a href="/rh-ladder-site/en/gallery/">Gallery</a></li>
+            <li><a href="https://starh.ca/" target="_blank">Services</a></li>
+            <li><a href="/rh-ladder-site/en/contact/">Contact</a></li>
+            <li><a href="https://rhed.ca/en/" target="_blank" class="elite-pill">Elite</a></li>
+        </ul>
+    </nav>
+    <header class="hero-about"><h1>Over 35 Years of Innovation</h1></header>
+    <section class="section">
+        <div class="container-flex">
+            <div class="flex-text">
+                <h2>The Origin of Success</h2>
+                <p>Founded in <span class="highlight">1991</span> by the visionary team at Robert Hydraulique, the company set out with a clear mission: to redefine aerial ladder industry standards. What began as a specialized workshop has evolved over three decades into a <span class="highlight">global leader</span> recognized for precision engineering.</p>
+                <p>Based in Lanoraie, Quebec, we design, manufacture, and assemble units that travel across North America and beyond. Our strength lies in our ability to listen to technicians in the field to provide them with the ultimate work tool.</p>
+            </div>
+            <div class="flex-img"><img src="/rh-ladder-site/media/2020/11/base-rh-low-profile_57dc0a438dbfa.jpg"></div>
+        </div>
+    </section>
+    <section class="section section-alt">
+        <div class="container-flex" style="flex-direction: row-reverse;">
+            <div class="flex-text">
+                <h2>The Elite Era (2024-2026)</h2>
+                <p>The future of RH Equipment is being written today with the launch of the <span class="highlight">Elite Division (RHED)</span>. This new branch represents the peak of our expertise, introducing <span class="highlight">100% electric</span> units capable of operating in the most hostile environments with unparalleled silence and cleanliness.</p>
+                <p>By integrating <span class="highlight">STRENX®</span> high-performance steel, we have achieved the feat of reducing structural weight by 40% while increasing durability. Coupled with our exclusive <span class="highlight">Ozone-tech</span> technology, we offer eco-responsible energy management that allows working without leaving the truck's engine running.</p>
+            </div>
+            <div class="flex-img"><img src="/rh-ladder-site/media/2025/06/p68czeoz.jpg"></div>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-item"><span class="stat-number">35+</span><span class="stat-label">Years of expertise</span></div>
+            <div class="stat-item"><span class="stat-number">40%</span><span class="stat-label">Weight reduction (Strenx)</span></div>
+            <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Electric (Elite Series)</span></div>
+            <div class="stat-item"><span class="stat-number">QC</span><span class="stat-label">Quebec Pride</span></div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container-flex">
+            <div class="flex-text">
+                <h2>Aeronautical Precision</h2>
+                <p>At RH, we make no compromises on quality. Our manufacturing processes include high-precision <span class="highlight">waterjet cutting</span> and <span class="highlight">robotic welding</span>. Every joint, every weld, and every component is inspected to meet the strictest safety standards in the electrical and telecommunications industries.</p>
+                <p>We are proud to support the local economy while radiating internationally, providing solutions that protect the lives of high-altitude workers every day.</p>
+            </div>
+            <div class="flex-img"><img src="/rh-ladder-site/media/2020/11/robot-cell.jpg"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="/rh-ladder-site/media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 40px; margin-bottom: 2rem;">
+                <p style="color: #666; font-size: 0.9rem;">Global manufacturer of high-precision aerial ladders and lifting devices for over 30 years.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="/rh-ladder-site/en/catalogue-insulated/">Insulated Ladders</a></li>
+                    <li><a href="/rh-ladder-site/en/catalogue-non-insulated/">Non-Insulated</a></li>
+                    <li><a href="/rh-ladder-site/en/catalogue-specialized/">Specialized Units</a></li>
+                    <li><a href="/rh-ladder-site/en/options/">Options & Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="/rh-ladder-site/en/about/">About Us</a></li>
+                    <li><a href="https://starh.ca/" target="_blank">STARH INC.</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <p style="color: #888; font-size: 0.9rem;">89 Industrial Park St, Lanoraie, QC, J0K 1E0</p>
+                <p style="color: #fda40a; font-weight: 800; margin-top: 1rem;">450-582-8701</p>
+            </div>
+        </div>
+        <div class="copyright">© 2026 RH Equipment. All rights reserved.</div>
+    </footer>
+</body>
 </html>
