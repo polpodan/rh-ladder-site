@@ -187,6 +187,46 @@
         }
         .elite-pill:hover { background: #fda40a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
         @media (max-width: 768px) { .nav-links { display: none; } }
+  
+        /* Navigation */
+        nav {
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.2rem 5%; background: #121212;
+            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .logo img { height: 40px; border: none; }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; margin: 0; padding: 0; }
+        .nav-links a { 
+            text-decoration: none; color: #ffffff; font-weight: 600; font-size: 0.8rem; 
+            text-transform: uppercase; letter-spacing: 1.5px; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+            background: #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .elite-pill {
+            background: #121212; color: #ffffff !important;
+            padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800 !important;
+            border: 2px solid #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none; text-transform: uppercase; font-size: 0.8rem;
+        }
+        .elite-pill:hover { background: #fda40a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
+
+        /* Footer */
+        footer { background: #0a0a0a; color: white; padding: 5rem 5% 2rem; margin-top: 5rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; text-align: left; }
+        .footer-col h5 { color: #fda40a; font-weight: 800; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col li { margin-bottom: 1rem; }
+        .footer-col a { color: #888; text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
+        .footer-col a:hover { color: #fff; }
+        .copyright { border-top: 1px solid #222; padding-top: 2rem; text-align: center; font-size: 0.8rem; color: #555; margin-top: 4rem; }
+
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr; } }
   </style>
  </head>
  <body>
