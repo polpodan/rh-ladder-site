@@ -243,6 +243,16 @@
             opacity: 0; 
             animation: fadeInUp 1s ease-out forwards 0.6s; 
         }
+   /* Animation reveal on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
   </style>
  </head>
  <body>
@@ -367,22 +377,24 @@
   </section>
   <section class="elite-section" style="background: #0a0a0a; color: white; display: flex; align-items: center; flex-wrap: wrap; border-top: 4px solid #E30613;">
    <div class="elite-text" style="flex: 1.2; padding: 5rem 5%; min-width: 350px;">
-    <img alt="RHED Logo" src="/rh-ladder-site/media/2026/05/RHED_RGB_Renverse_FR.svg" style="height: 80px; margin-bottom: 2rem;"/>
-    <h2 style="font-size: 2.5rem; font-weight: 900; color: #E30613; margin-bottom: 1.5rem; text-transform: uppercase;">
+    <img alt="RHED Logo" class="reveal" src="/rh-ladder-site/media/2026/05/RHED_RGB_Renverse_FR.svg" style="height: 80px; margin-bottom: 2rem; transition-delay: 0.0s;"/>
+    <h2 class="reveal" style="font-size: 2.5rem; font-weight: 900; color: #E30613; margin-bottom: 1.5rem; text-transform: uppercase; transition-delay: 0.2s;">
      Le camion RHED, là où la technologie rencontre l'intervention tactique
     </h2>
-    <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.8;">
+    <p class="reveal" style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.8; transition-delay: 0.4s;">
      Depuis 1991, Équipements RH est un chef de file dans la conception et la fabrication de systèmes aériens hydrauliques haute performance. Forte de plus de 30 ans d’expertise, notre réputation repose sur la fiabilité, la durabilité et la précision de nos élévateurs et échelles.
     </p>
-    <p style="font-size: 1rem; color: #A5A9B4; margin-bottom: 3rem;">
+    <p class="reveal" style="font-size: 1rem; color: #A5A9B4; margin-bottom: 3rem; transition-delay: 0.6000000000000001s;">
      Aujourd’hui, avec le lancement du RHED la Division Élite de RH, nous redéfinissons les standards des véhicules d’urgence, de sauvetage et d’intervention incendie.
     </p>
-    <a class="elite-link-giant" href="https://rhed.ca/" style="font-size: 2rem; color: #E30613; border-color: #E30613;" target="_blank">
+    <a class="elite-link-giant reveal" href="https://rhed.ca/" style="font-size: 2rem; color: #E30613; border-color: #E30613; transition-delay: 0.8s;" target="_blank">
      Visiter rhed.ca
     </a>
    </div>
-   <div class="elite-img" style="flex: 1; height: 600px; min-width: 350px; background: url('/rh-ladder-site/media/2025/06/p68czeoz.jpg'); background-size: cover; background-position: center;">
-   </div>
+   <a href="https://rhed.ca/fr/" style="flex: 1; display: block; text-decoration: none;" target="_blank">
+    <div class="elite-img" style="flex: 1; height: 600px; min-width: 350px; background: url('/rh-ladder-site/media/2025/06/p68czeoz.jpg'); background-size: cover; background-position: center; width: 100%;">
+    </div>
+   </a>
   </section>
   <section class="section" id="expertise">
    <div class="section-header">
@@ -499,5 +511,17 @@
     © 2026 RH Equipment. Tous droits réservés.
    </div>
   </footer>
+  <script>
+   const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
  </body>
 </html>
