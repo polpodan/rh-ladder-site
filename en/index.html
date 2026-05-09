@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   RH Equipment | Excellence &amp; Innovation 2026
-  </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-  <style>
-   :root {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RH Equipment | Excellence & Innovation 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
             --primary: #fda40a;
             --secondary: #121212;
             --bg-body: #ffffff;
@@ -18,7 +16,7 @@
             --text-main: #1a1a1a;
             --text-muted: #666666;
             --white: #ffffff;
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --easing: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,45 +25,51 @@
 
         /* Navigation */
         nav {
-            position: fixed; top: 0; width: 100%; z-index: 1000;
+            position: sticky; top: 0; z-index: 1000;
             display: flex; justify-content: space-between; align-items: center;
-            padding: 1.2rem 5%; background: var(--secondary);
+            padding: 1.2rem 5%; background: #121212;
             backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1);
-            transition: var(--transition);
+            transition: all 0.4s var(--easing);
         }
-        .logo img { height: 45px; }
-        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
+        .logo img { height: 40px; border: none; }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; margin: 0; padding: 0; }
         .nav-links a { 
-            text-decoration: none; color: var(--white); font-weight: 600; font-size: 0.8rem; 
+            text-decoration: none; color: #ffffff; font-weight: 600; font-size: 0.8rem; 
             text-transform: uppercase; letter-spacing: 1.5px; position: relative;
         }
         .nav-links a::after {
             content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
-            background: var(--primary); transition: var(--transition);
+            background: var(--primary); transition: all 0.4s var(--easing);
         }
         .nav-links a:hover::after { width: 100%; }
 
         .elite-pill {
-            background: var(--secondary); color: var(--white) !important;
+            background: #121212; color: #ffffff !important;
             padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800 !important;
-            border: 2px solid var(--primary); transition: var(--transition);
+            border: 2px solid var(--primary); transition: all 0.4s var(--easing);
+            text-decoration: none; text-transform: uppercase; font-size: 0.8rem;
         }
         .elite-pill:hover { background: var(--primary); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
 
         /* Hero Section */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         .hero {
             height: 60vh; display: flex; align-items: center; justify-content: center;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/rh-ladder-site/media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg');
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('../media/2020/11/headerback-rh-ladder_57aa66a80977a.jpg');
             background-size: cover; background-position: center; color: var(--white); text-align: center;
             padding-top: 60px;
         }
         .hero-content { max-width: 900px; padding: 0 2rem; }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem; text-transform: uppercase; }
-        .hero p { font-size: 1.1rem; font-weight: 300; margin-bottom: 1.5rem; opacity: 0.9; letter-spacing: 0.5px; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem; text-transform: uppercase; opacity: 0; animation: fadeInUp 1s ease-out forwards; }
+        .hero p { font-size: 1.1rem; font-weight: 300; margin-bottom: 1.5rem; opacity: 0; animation: fadeInUp 1s ease-out forwards 0.3s; letter-spacing: 0.5px; }
         .hero .btn-hero { 
             padding: 1.2rem 3rem; background: var(--primary); color: var(--white); 
             text-decoration: none; font-weight: 800; border-radius: 4px; text-transform: uppercase; 
-            transition: var(--transition); display: inline-block;
+            transition: all 0.4s var(--easing); display: inline-block;
+            opacity: 0; animation: fadeInUp 1s ease-out forwards 0.6s;
         }
         .hero .btn-hero:hover { transform: scale(1.05); filter: brightness(1.1); }
 
@@ -78,10 +82,10 @@
         .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
         .pillar-card { 
             position: relative; height: 550px; border-radius: 12px; overflow: hidden; 
-            cursor: pointer; transition: var(--transition); border: 1px solid #eee;
+            cursor: pointer; transition: all 0.4s var(--easing); border: 1px solid #eee;
             text-decoration: none; display: block;
         }
-        .pillar-card img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .pillar-card img { width: 100%; height: 100%; object-fit: cover; transition: all 0.4s var(--easing); }
         .pillar-overlay { 
             position: absolute; bottom: 0; left: 0; width: 100%; padding: 3rem 2rem;
             background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: var(--white);
@@ -93,127 +97,30 @@
 
         /* Elite Section */
         .elite-section { 
-            background: var(--secondary); color: var(--white); display: flex; align-items: center; 
-            padding: 0; overflow: hidden; min-height: 600px;
+            background: #0a0a0a; color: white; display: flex; align-items: center; 
+            flex-wrap: wrap; border-top: 4px solid #E30613;
         }
-        .elite-text { flex: 1; padding: 5rem 8%; }
-        .elite-text h2 { font-size: 3rem; font-weight: 900; color: var(--primary); margin-bottom: 2rem; text-transform: uppercase; }
-        .elite-text p { font-size: 1.1rem; opacity: 0.8; margin-bottom: 3rem; }
-        .elite-img { flex: 1; height: 600px; background: url('/rh-ladder-site/media/2025/06/p68czeoz.jpg'); background-size: cover; background-position: center; }
+        .elite-text { flex: 1.2; padding: 5rem 5%; min-width: 350px; }
+        .elite-text h2 { font-size: 2.5rem; font-weight: 900; color: #E30613; margin-bottom: 1.5rem; text-transform: uppercase; }
+        .elite-text p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.8; }
+        .elite-img { flex: 1; height: 600px; min-width: 350px; background: url('../media/2025/06/p68czeoz.jpg'); background-size: cover; background-position: center; width: 100%; }
         
         .elite-link-giant {
-            font-size: 2.2rem; font-weight: 900; color: var(--primary); text-decoration: none; 
-            text-transform: uppercase; border-bottom: 5px solid var(--primary); padding-bottom: 5px;
-            transition: var(--transition); display: inline-block;
+            font-size: 2rem; font-weight: 900; color: #E30613; text-decoration: none; 
+            text-transform: uppercase; border-bottom: 5px solid #E30613; padding-bottom: 5px;
+            transition: all 0.4s var(--easing); display: inline-block;
         }
         .elite-link-giant:hover { color: var(--white); border-color: var(--white); }
+
+        /* Scroll Reveal */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
         /* Features */
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 4rem; text-align: center; }
         .feature-item img { height: 60px; margin-bottom: 2rem; }
         .feature-item h4 { font-size: 1.2rem; font-weight: 800; margin-bottom: 1rem; text-transform: uppercase; }
         .feature-item p { color: var(--text-muted); font-size: 0.95rem; }
-
-        /* Footer */
-        footer { background: #0a0a0a; color: var(--white); padding: 5rem 5% 2rem; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; margin-bottom: 4rem; }
-        .footer-col h5 { color: var(--primary); font-weight: 800; margin-bottom: 2rem; text-transform: uppercase; font-size: 0.9rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 1rem; }
-        .footer-col a { color: #888; text-decoration: none; transition: var(--transition); font-size: 0.9rem; }
-        .footer-col a:hover { color: var(--white); }
-        .copyright { border-top: 1px solid #222; padding-top: 2rem; text-align: center; font-size: 0.8rem; color: #555; }
-
-        @media (max-width: 1024px) {
-            .elite-section { flex-direction: column; }
-            .elite-img { width: 100%; height: 400px; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 768px) {
-            nav { padding: 1rem 5%; }
-            .nav-links { display: none; }
-            .hero h1 { font-size: 3.5rem; }
-            .section { padding: 5rem 5%; }
-        }
-   nav {
-            position: sticky; top: 0; z-index: 1000;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1.2rem 5%; background: #121212;
-            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .logo img { height: 40px; }
-        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
-        .nav-links a { 
-            text-decoration: none; color: #ffffff; font-weight: 600; font-size: 0.8rem; 
-            text-transform: uppercase; letter-spacing: 1.5px; position: relative;
-        }
-        .nav-links a::after {
-            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
-            background: #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .nav-links a:hover::after { width: 100%; }
-
-        .elite-pill {
-            background: #121212; color: #ffffff !important;
-            padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800 !important;
-            border: 2px solid #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            text-decoration: none; text-transform: uppercase; font-size: 0.8rem;
-        }
-        .elite-pill:hover { background: #fda40a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
-   nav {
-            position: sticky; top: 0; z-index: 1000;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1.2rem 5%; background: #121212;
-            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .logo img { height: 40px; border: none; }
-        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; margin: 0; padding: 0; }
-        .nav-links a { 
-            text-decoration: none; color: #ffffff; font-weight: 600; font-size: 0.8rem; 
-            text-transform: uppercase; letter-spacing: 1.5px; position: relative;
-        }
-        .nav-links a::after {
-            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
-            background: #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .nav-links a:hover::after { width: 100%; }
-        .elite-pill {
-            background: #121212; color: #ffffff !important;
-            padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800 !important;
-            border: 2px solid #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            text-decoration: none; text-transform: uppercase; font-size: 0.8rem;
-        }
-        .elite-pill:hover { background: #fda40a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
-        @media (max-width: 768px) { .nav-links { display: none; } }
-  
-        /* Navigation */
-        nav {
-            position: sticky; top: 0; z-index: 1000;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1.2rem 5%; background: #121212;
-            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .logo img { height: 40px; border: none; }
-        .nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; margin: 0; padding: 0; }
-        .nav-links a { 
-            text-decoration: none; color: #ffffff; font-weight: 600; font-size: 0.8rem; 
-            text-transform: uppercase; letter-spacing: 1.5px; position: relative;
-        }
-        .nav-links a::after {
-            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
-            background: #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .nav-links a:hover::after { width: 100%; }
-        .elite-pill {
-            background: #121212; color: #ffffff !important;
-            padding: 0.7rem 1.5rem; border-radius: 50px; font-weight: 800 !important;
-            border: 2px solid #fda40a; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            text-decoration: none; text-transform: uppercase; font-size: 0.8rem;
-        }
-        .elite-pill:hover { background: #fda40a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(253, 164, 10, 0.3); }
 
         /* Footer */
         footer { background: #0a0a0a; color: white; padding: 5rem 5% 2rem; margin-top: 5rem; }
@@ -227,282 +134,144 @@
 
         @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 768px) { .nav-links { display: none; } .footer-grid { grid-template-columns: 1fr; } }
-   @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .hero h1 { 
-            opacity: 0; 
-            animation: fadeInUp 1s ease-out forwards; 
-        }
-        .hero p { 
-            opacity: 0; 
-            animation: fadeInUp 1s ease-out forwards 0.3s; 
-        }
-        .hero .btn-hero { 
-            opacity: 0; 
-            animation: fadeInUp 1s ease-out forwards 0.6s; 
-        }
-   /* Animation reveal on scroll */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-  </style>
- </head>
- <body>
-  <nav>
-   <div class="logo">
-    <a href="../en/">
-     <img alt="RH Equipment" src="../media/2020/11/rh-logo-aerila-lift-eng-wht.png"/>
-    </a>
-   </div>
-   <ul class="nav-links">
-    <li>
-     <a href="../en/">
-      Home
-     </a>
-    </li>
-    <li>
-     <a href="../en/#produits">
-      Products
-     </a>
-    </li>
-    <li>
-     <a href="../en/gallery/">
-      Gallery
-     </a>
-    </li>
-    <li>
-     <a href="https://starh.ca/" target="_blank">
-      Services
-     </a>
-    </li>
-    <li>
-     <a href="../en/contact/">
-      Contact
-     </a>
-    </li>
-    <li>
-     <a href="../fr/" style="color:#888;">
-      [FR]
-     </a>
-    </li>
-    <li>
-     <a class="elite-pill" href="https://rhed.ca/" target="_blank">
-      Elite
-     </a>
-    </li>
-   </ul>
-  </nav>
-  <section class="hero">
-   <div class="hero-content">
-    <h1>
-     Engineering
-     <br/>
-     Without Compromise
-    </h1>
-    <p>
-     Discover the new generation of aerial ladders. Lighter, stronger, and fully optimized for urban performance.
-    </p>
-    <a class="btn-hero" href="#produits">
-     Explore the Range
-    </a>
-   </div>
-  </section>
-  <section class="section" id="produits">
-   <div class="section-header">
-    <h2>
-     Our Solutions
-    </h2>
-    <div class="line">
-    </div>
-   </div>
-   <div class="pillars-grid">
-    <a class="pillar-card" href="../en/catalogue-insulated/">
-     <img alt="Série Isolée" src="../media/2020/11/rh-ladder-product-main-rh38d.jpg"/>
-     <div class="pillar-overlay">
-      <h3>
-       Insulated Series
-      </h3>
-      <p>
-       Maximum safety for electrical grids.
-      </p>
-     </div>
-    </a>
-    <a class="pillar-card" href="../en/catalogue-non-insulated/">
-     <img alt="Série Non-Isolée" src="../media/2020/11/product-lg-rh38-aerila-ladder.jpg"/>
-     <div class="pillar-overlay">
-      <h3>
-       Insulated Series
-      </h3>
-      <p>
-       Maximum safety for electrical grids.
-      </p>
-     </div>
-    </a>
-    <a class="pillar-card" href="../en/catalogue-specialized/">
-     <img alt="Unités Spécialisées" src="../media/2020/11/product-lg-rhr-towable-unit-insulated.jpg"/>
-     <div class="pillar-overlay">
-      <h3>
-       Specialized Units
-      </h3>
-      <p>
-       Towable and custom solutions.
-      </p>
-     </div>
-    </a>
-    <a class="pillar-card" href="../en/options/">
-     <img alt="Options &amp; Accessoires" src="../media/2020/11/battery-tray-bucket.jpg"/>
-     <div class="pillar-overlay">
-      <h3>
-       Options &amp; Accessories
-      </h3>
-      <p>
-       Customize your unit to your needs.
-      </p>
-     </div>
-    </a>
-   </div>
-  </section>
-  <section class="elite-section" style="background: #0a0a0a; color: white; display: flex; align-items: center; flex-wrap: wrap; border-top: 4px solid #E30613;">
-   <div class="elite-text" style="flex: 1.2; padding: 5rem 5%; min-width: 350px;">
-    <img alt="RHED Logo" class="reveal" src="../media/2026/05/RHED_Renverse.png" style="height: 80px; margin-bottom: 2rem; transition-delay: 0.0s;"/>
-    <h2 class="reveal" style="font-size: 2.5rem; font-weight: 900; color: #E30613; margin-bottom: 1.5rem; text-transform: uppercase; transition-delay: 0.2s;">
-     Where Technology Meets Tactical Response
-    </h2>
-    <p class="reveal" style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; line-height: 1.8; transition-delay: 0.4s;">
-     Since 1991, RH Equipment has been a leader in the design and manufacturing of high-performance hydraulic aerial systems. With over 30 years of expertise, we’ve built a reputation on reliability, durability, and precision-engineered lifts and ladders.
-    </p>
-    <p class="reveal" style="font-size: 1rem; color: #A5A9B4; margin-bottom: 3rem; transition-delay: 0.6000000000000001s;">
-     Today, with the launch of RHED, the RH Elite Division, we’re setting a new standard for emergency, rescue, and firefighting vehicles. Agile. Tactical. Built to reach where others can’t.
-    </p>
-    <a class="elite-link-giant reveal" href="https://rhed.ca/" style="font-size: 2rem; color: #E30613; border-color: #E30613; transition-delay: 0.8s;" target="_blank">
-     Visit rhed.ca
-    </a>
-   </div>
-   <a href="https://rhed.ca/" style="flex: 1; display: block; text-decoration: none;" target="_blank">
-    <div class="elite-img" style="flex: 1; height: 600px; min-width: 350px; background: url('../media/2025/06/p68czeoz.jpg'); background-size: cover; background-position: center; width: 100%;">
-    </div>
-   </a>
-  </section>
-  <section class="section" id="expertise">
-   <div class="section-header">
-    <h2>
-     Our Expertise
-    </h2>
-    <div class="line">
-    </div>
-   </div>
-   <div class="features-grid">
-    <div class="feature-item">
-     <img alt="Acier Strenx" src="../media/2020/11/orb-icon-wrench.png"/>
-     <h4>
-      Acier STRENX
-     </h4>
-     <p>
-      Nous utilisons l'acier haute performance Strenx pour réduire le poids de nos unités de 40% tout en augmentant leur résistance.
-     </p>
-    </div>
-    <div class="feature-item">
-     <img alt="Électrique" src="../media/2020/11/orb-icon-green.png"/>
-     <h4>
-      100% Electric
-     </h4>
-     <p>
-      Our ladders operate on auxiliary batteries. Work without noise or engine pollution.
-     </p>
-    </div>
-    <div class="feature-item">
-     <img alt="Robotique" src="../media/2020/11/robot-cell.jpg" style="border-radius: 50%; object-fit: cover;"/>
-     <h4>
-      Production Robotisée
-     </h4>
-     <p>
-      Soudure robotisée et découpe jet d'eau pour une précision de niveau aéronautique.
-     </p>
-    </div>
-   </div>
-  </section>
-  <section id="google-map" style="width: 100%; height: 450px; margin-top: 5rem; border-top: 1px solid #eee; border-bottom: 4px solid #fda40a;">
-   <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.6533038676235!2d-73.2201389231872!3d45.92218057108422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc1930777e40889%3A0x6b77c570f7d5494d!2s89%20Rue%20du%20Parc%20Industriel%2C%20Lanoraie%2C%20QC%20J0K%201E0!5e0!3m2!1sfr!2sca!4v1715000000000!5m2!1sfr!2sca" style="border:0;" width="100%">
-   </iframe>
-  </section>
-  <footer>
-   <div class="footer-grid">
-    <div class="footer-col">
-     <img alt="RH Logo" src="../media/2020/11/rh-logo-aerila-lift-eng-wht.png" style="height: 40px; margin-bottom: 2rem;"/>
-     <p style="color: #666; font-size: 0.9rem;">
-      Global manufacturer of high-precision aerial ladders and lifting devices for over 30 years.
-     </p>
-    </div>
-    <div class="footer-col">
-     <h5>
-      Products
-     </h5>
-     <ul>
-      <li>
-       <a href="../en/catalogue-insulated/">
-        Insulated Ladders
-       </a>
-      </li>
-      <li>
-       <a href="../en/catalogue-non-insulated/">
-        Non-Insulated
-       </a>
-      </li>
-      <li>
-       <a href="../en/catalogue-specialized/">
-        Specialized Units
-       </a>
-      </li>
-      <li>
-       <a href="../en/options/">
-        Options &amp; Accessories
-       </a>
-      </li>
-     </ul>
-    </div>
-    <div class="footer-col">
-     <h5>
-      Company
-     </h5>
-     <ul>
-      <li>
-       <a href="../en/about/">
-        About Us
-       </a>
-      </li>
-      <li>
-       <a href="https://starh.ca/" target="_blank">
-        STARH INC.
-       </a>
-      </li>
-     </ul>
-    </div>
-    <div class="footer-col">
-     <h5>
-      Contact
-     </h5>
-     <p style="color: #888; font-size: 0.9rem;">
-      89 Industrial Park St, Lanoraie, QC, J0K 1E0
-     </p>
-     <p style="color: #fda40a; font-weight: 800; margin-top: 1rem;">
-      450-582-8701
-     </p>
-    </div>
-   </div>
-   <div class="copyright">
-    © 2026 RH Equipment. All rights reserved.
-   </div>
-  </footer>
-  <script>
-   const observerOptions = { threshold: 0.1 };
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="../en/"><img src="../media/2020/11/rh-logo-aerila-lift-eng-wht.png" alt="RH Equipment"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../en/">Home</a></li>
+            <li><a href="../en/#produits">Products</a></li>
+            <li><a href="../en/gallery/">Gallery</a></li>
+            <li><a href="https://starh.ca/" target="_blank">Services</a></li>
+            <li><a href="../en/contact/">Contact</a></li>
+            <li><a href="../fr/" style="color:#888;">[FR]</a></li>
+            <li><a href="https://rhed.ca/" target="_blank" class="elite-pill">Elite</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Engineering<br>Without Compromise</h1>
+            <p>Discover the new generation of aerial ladders. Lighter, stronger, and fully optimized for urban performance.</p>
+            <a href="#produits" class="btn-hero">Explore the Range</a>
+        </div>
+    </section>
+
+    <section class="section" id="produits">
+        <div class="section-header">
+            <h2>Our Solutions</h2>
+            <div class="line"></div>
+        </div>
+        <div class="pillars-grid">
+            <a href="../en/catalogue-insulated/" class="pillar-card">
+                <img src="../media/2020/11/rh-ladder-product-main-rh38d.jpg" alt="Insulated Series">
+                <div class="pillar-overlay">
+                    <h3>Insulated Series</h3>
+                    <p>Maximum safety for electrical grids.</p>
+                </div>
+            </a>
+            <a href="../en/catalogue-non-insulated/" class="pillar-card">
+                <img src="../media/2020/11/product-lg-rh38-aerila-ladder.jpg" alt="Non-Insulated Series">
+                <div class="pillar-overlay">
+                    <h3>Non-Insulated Series</h3>
+                    <p>Performance and urban lightness.</p>
+                </div>
+            </a>
+            <a href="../en/catalogue-specialized/" class="pillar-card">
+                <img src="../media/2020/11/product-lg-rhr-towable-unit-insulated.jpg" alt="Specialized Units">
+                <div class="pillar-overlay">
+                    <h3>Specialized Units</h3>
+                    <p>Towable and custom solutions.</p>
+                </div>
+            </a>
+            <a href="../en/options/" class="pillar-card">
+                <img src="../media/2020/11/battery-tray-bucket.jpg" alt="Options & Accessories">
+                <div class="pillar-overlay">
+                    <h3>Options & Accessories</h3>
+                    <p>Customize your unit according to your needs.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="elite-section">
+        <div class="elite-text">
+            <img src="../media/2026/05/RHED_Renverse.png" alt="RHED Logo" style="height: 80px; margin-bottom: 2rem;" class="reveal">
+            <h2 class="reveal" style="transition-delay: 0.2s;">Where Technology Meets Tactical Response</h2>
+            <p class="reveal" style="transition-delay: 0.4s;">Since 1991, RH Equipment has been a leader in the design and manufacturing of high-performance hydraulic aerial systems. With over 30 years of expertise, we’ve built a reputation on reliability, durability, and precision-engineered lifts and ladders.</p>
+            <p class="reveal" style="transition-delay: 0.6s; color: #A5A9B4;">Today, with the launch of RHED, the RH Elite Division, we’re setting a new standard for emergency, rescue, and firefighting vehicles. Agile. Tactical. Built to reach where others can’t.</p>
+            <a href="https://rhed.ca/" target="_blank" class="elite-link-giant reveal" style="transition-delay: 0.8s;">Visit rhed.ca</a>
+        </div>
+        <a href="https://rhed.ca/" target="_blank" style="flex: 1; display: block;">
+            <div class="elite-img"></div>
+        </a>
+    </section>
+
+    <section class="section" id="expertise">
+        <div class="section-header">
+            <h2>Our Expertise</h2>
+            <div class="line"></div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <img src="../media/2020/11/orb-icon-wrench.png" alt="Strenx Steel">
+                <h4>STRENX Steel</h4>
+                <p>We use Strenx high-performance steel to reduce unit weight by 40% while increasing strength.</p>
+            </div>
+            <div class="feature-item">
+                <img src="../media/2020/11/orb-icon-green.png" alt="Electric">
+                <h4>100% Electric</h4>
+                <p>Our ladders operate on auxiliary batteries. Work without noise or engine pollution.</p>
+            </div>
+            <div class="feature-item">
+                <img src="../media/2020/11/robot-cell.jpg" alt="Robotic" style="border-radius: 50%; object-fit: cover;">
+                <h4>Robotic Production</h4>
+                <p>Robotic welding and waterjet cutting for aerospace-level precision.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="google-map" style="width: 100%; height: 450px; margin-top: 5rem; border-top: 1px solid #eee; border-bottom: 4px solid #fda40a;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.6533038676235!2d-73.2201389231872!3d45.92218057108422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc1930777e40889%3A0x6b77c570f7d5494d!2s89%20Rue%20du%20Parc%20Industriel%2C%20Lanoraie%2C%20QC%20J0K%201E0!5e0!3m2!1sfr!2sca!4v1715000000000!5m2!1sfr!2sca" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../media/2020/11/rh-logo-aerila-lift-eng-wht.png" alt="RH Logo" style="height: 40px; margin-bottom: 2rem;">
+                <p style="color: #666; font-size: 0.9rem;">Global manufacturer of high-precision aerial ladders and lifting devices for over 30 years.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="../en/catalogue-insulated/">Insulated Ladders</a></li>
+                    <li><a href="../en/catalogue-non-insulated/">Non-Insulated</a></li>
+                    <li><a href="../en/catalogue-specialized/">Specialized Units</a></li>
+                    <li><a href="../en/options/">Options & Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="../en/about/">About Us</a></li>
+                    <li><a href="https://starh.ca/" target="_blank">STARH INC.</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <p style="color: #888; font-size: 0.9rem;">89 Industrial Park St, Lanoraie, QC, J0K 1E0</p>
+                <p style="color: #fda40a; font-weight: 800; margin-top: 1rem;">450-582-8701</p>
+            </div>
+        </div>
+        <div class="copyright">© 2026 RH Equipment. All rights reserved.</div>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -510,8 +279,7 @@
                 }
             });
         }, observerOptions);
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
- </body>
+    </script>
+</body>
 </html>
