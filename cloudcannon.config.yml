@@ -5,7 +5,6 @@ paths:
   static: .
   pages: .
 
-# Identify which files are pages
 collections_config:
   pages:
     path: .
@@ -14,14 +13,6 @@ collections_config:
       base: none
       glob: "**/*.html"
 
-# Enable visual editing for specific classes
 _enabled_editors:
   - visual
   - source
-
-# Configure the visual editor
-_options:
-  visual:
-    # Allow clicking on elements with these classes to edit them
-    # CloudCannon usually looks for .editable by default if configured
-    content_selector: 'main, .hero-content, .elite-text, .prod-desc, .container'
